@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-rqisl-portfolio-project-czt4c7ufe2.us2.codeanyapp.com',
-                 'https://order-booking-online-f33d634e6883.herokuapp.com/',
+                 'order-booking-online-f33d634e6883.herokuapp.com',
                  'localhost']
 
 
