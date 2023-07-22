@@ -19,13 +19,14 @@
         </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'javascript/overlay_popup.js'  %}" type="text/javascript"></script>
+
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light dark-bg">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
                         class="thin">|star</span></span></span></a>
@@ -34,12 +35,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link text-white active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'overlay' %}">Overlay</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'overlay' %}">Overlay</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -54,9 +55,6 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span>
             </div>
         </div>
     </nav>
@@ -69,7 +67,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
+        <p class="m-0 text-center text-white">Order and Reservered</p>
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>

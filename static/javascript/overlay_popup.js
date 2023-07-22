@@ -1,28 +1,12 @@
-// Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_overlay2
+// Above I copied it to here and modified for login, sign up and order foods 
+// when the user is login. 
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
 
-// When the user clicks on the button, open the modal
-window.onload = function () {
-    btn.onclick = function () {
-        modal.style.display = "block";
-    };
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-};
-console.log(btn, "yes it is working click");
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
