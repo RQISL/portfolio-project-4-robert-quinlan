@@ -9,10 +9,6 @@ body {
     color: #4a4a4f;
 }
 
-.red-o {
-    color: #e84610;
-}
-
 .thin {
     font-weight: 300;
 }
@@ -26,7 +22,21 @@ body {
 }
 
 .main-bg {
-    background-color: #f9fafc;
+
+    background-color: #2A2F33;
+}
+
+.footer {
+    background-color: #BBB6A5;
+    color: #2A2F33;
+}
+
+/* Login style */
+.container {
+    background-color: #BBB6A5;
+    margin-top: 150px;
+    padding: 20px 0 50px;
+    border-radius: 50px;
 }
 
 .card {
@@ -107,25 +117,25 @@ body {
 }
 
 .btn-signup {
-    background-color: #23bbbb;
+    background-color: #2A2F33;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #23bbbb;
+    background-color: #8c9491;
+    color: #fff;
 }
 
 .link {
-    color: #23bbbb;
-    text-decoration: none;
+    color: #2A2F33;
+    text-decoration: underline;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
-    text-decoration: underline;
+    color: #8c8c9c;
+    text-decoration: none;
 }
 
 .btn-like {
@@ -204,10 +214,10 @@ body {
 
 nav {
     border-bottom: #BBB6A5 solid 3px;
-    /* float: right; */
 }
 
-ul {
+.text-white {
     color: #BBB6A5;
-    border: red solid 3px;
+    margin-right: 40px;
+    margin-top: 10px;
 }
