@@ -9,6 +9,14 @@ body {
     color: #4a4a4f;
 }
 
+.text-white {
+    color: #BBB6A5;
+}
+
+.text-white:hover {
+    color: #2A2F33;
+}
+
 .thin {
     font-weight: 300;
 }
@@ -210,14 +218,20 @@ body {
     }
 }
 
-/* Test background */
+/* Navbar bottom boarder line*/
 
 nav {
     border-bottom: #BBB6A5 solid 3px;
 }
 
-.text-white {
-    color: #BBB6A5;
+li {
     margin-right: 40px;
     margin-top: 10px;
+}
+
+.active,
+li:hover {
+    background-color: #BBB6A5;
+    transition: 0.7s;
+    color: #2A2F33;
 }

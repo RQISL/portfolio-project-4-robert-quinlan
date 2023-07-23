@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'order_foods',
+    'active_link',
 ]
 
 SITE_ID = 1

@@ -31,5 +31,5 @@ class PostDetail(View):
         )
 
 
-class Overlay(TemplateView):
-    template_name = "overlay.html"
+class OrderFoods(TemplateView):
+    template_name = "order_foods.html"

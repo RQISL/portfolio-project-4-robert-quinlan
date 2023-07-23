@@ -1,5 +1,12 @@
 {% load static %}
 
+{% url 'home' as home %}
+{% url 'order_foods' as order_foods %}
+{% url 'account_logout' as account_logout %}
+{% url 'account_signup' as account_signup %}
+{% url 'account_login' as account_login %}
+
+
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html class="h-100">
@@ -38,21 +45,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-white active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <li class="nav-item {% if request.path == home %} active {% endif %}">
+                        <a class="nav-link text-white" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="{% url 'overlay' %}">Overlay</a>
+                    <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
+                        <a class="nav-link text-white" aria-current="page" href="{% url 'order_foods' %}">Order
+                            Foods</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
+                    <li class="nav-item {% if request.path == account_logout %} active {% endif %}">
                         <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
-                    <li class="nav-item">
+                    <li class="nav-item {% if request.path == account_signup %} active {% endif %}">
                         <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {% if request.path == account_login %} active {% endif %}">
                         <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
