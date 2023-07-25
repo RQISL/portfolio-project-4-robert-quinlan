@@ -1,17 +1,17 @@
-{% extends 'home.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %}
 
-<div class="masthead">
+<!-- <div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+            <div class="col-md-6 masthead-text">-->
+<!-- Post title goes in these h1 tags -->
+<!-- <h1 class="post-title">{{ post.title }}</h1> -->
+<!-- Post author goes before the | the post's created date goes after -->
+<!-- <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
+            <div class="d-none d-md-block col-md-6 masthead-image"> -->
+<!-- The featured image URL goes in the src attribute -->
+<!-- {% if "placeholder" in post.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
@@ -19,7 +19,27 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>My Posts</h1>
+{% for post in posts %}
+<h2>{{ post.title }}</h2>
+<small>Published on {{ post.published_at | date:"M d, Y" }} by {{ post.author | title}}</small>
+<p>{{ post.content }}</p>
+
+{% if request.user.is_authenticated %}
+<p>
+    <a href="{% url 'post-edit' post.id %}">Edit</a>
+    <a href="{% url 'post-delete' post.id%}">Delete</a>
+</p>
+{% endif %}
+
+{% endfor %}
+{% endblock content %}
+
 
 <div class="container">
     <div class="row">
