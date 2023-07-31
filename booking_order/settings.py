@@ -29,7 +29,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-rqisl-portfolio-project-czt4c7ufe2.us2.codeanyapp.com']
+    'https://8000-rqisl-portfolio-project-czt4c7ufe2.us2.codeanyapp.com', 'https://order-booking-online-f33d634e6883.herokuapp.com/']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'django_summernote',
     'order_foods.apps.OrderFoodsConfig',
+    'delivery',
 ]
 
 SITE_ID = 1
