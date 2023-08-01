@@ -1,47 +1,38 @@
 from django.db import models
-from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
-
-
-class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="blog_posts"
-    )
-    featured_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.TextField(blank=True)
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='blogpost_like', blank=True)
-
-    class Meta:
-        ordering = ["-created_on"]
+class MenuItem(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    image = CloudinaryField('image')
+    price = models.DecimalField(max_digits=5, decimal_places=2)
+    category = models.ManyToManyField('Category', related_name='item')
 
     def __str__(self):
-        return self.title
-
-    def number_of_likes(self):
-        return self.likes.count()
+        return self.name
 
 
-class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE,
-                             related_name="comments")
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
-
-    class Meta:
-        ordering = ["created_on"]
+class Category(models.Model):
+    name = models.CharField(max_length=100)
 
     def __str__(self):
-        return f"Comment {self.body} by {self.name}"
+        return self.name
+
+
+class OrderModel(models.Model):
+    created_on = models.DateTimeField(auto_now_add=True)
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+    items = models.ManyToManyField(
+        'MenuItem', related_name='order', blank=True)
+    name = models.CharField(max_length=50, blank=True)
+    email = models.CharField(max_length=50, blank=True)
+    street = models.CharField(max_length=50, blank=True)
+    city = models.CharField(max_length=50, blank=True)
+    county = models.CharField(max_length=15, blank=True)
+    eirecode = models.CharField(max_length=8, blank=True)
+    is_paid = models.BooleanField(default=False)
+    is_shipped = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'Order: {self.created_on.strftime("%b %d %I: %M %p")}'
