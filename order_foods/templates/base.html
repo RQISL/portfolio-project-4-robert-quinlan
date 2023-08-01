@@ -2,6 +2,7 @@
 
 {% url 'home' as home %}
 {% url 'order_foods' as order_foods %}
+{% url 'aboutus' as aboutus %}
 {% url 'account_logout' as account_logout %}
 {% url 'account_signup' as account_signup %}
 {% url 'account_login' as account_login %}
@@ -38,7 +39,8 @@
             <a class="navbar-brand" href="{% url 'home' %}"><img
                     srcset="https://res.cloudinary.com/dhl4uxgix/image/upload/v1690182554/static/cloudinary/html/Order_logo_haolrb.png 3700w"
                     src="https://res.cloudinary.com/dhl4uxgix/image/upload/v1690182554/static/cloudinary/html/Order_logo_haolrb.png"
-                    alt="Order food location logo" sizes="60vw" class="d-inline-block align-text-middle" alt=""><span class="p-2">Order Foods & Delivery</span></a>
+                    alt="Order food location logo" sizes="60vw" class="d-inline-block align-text-middle" alt=""><span
+                    class="p-2">Order Foods & Delivery</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,12 +50,16 @@
                     <li class="nav-item {% if request.path == home %} active {% endif %}">
                         <a class="nav-link text-white" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
+                    <li class="nav-item {% if request.path == aboutus %} active {% endif %}">
+                        <a class="nav-link text-white" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
+                    </li>
                     <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
                         <a class="nav-link text-white" aria-current="page" href="{% url 'order_foods' %}">Order
                             Foods</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <span class="image-flash mx-auto">Hello {{ request.user.username | title }}, <br>Welcome Order Foods & Delivery</span>
+                    <span class="image-flash mx-auto">Hello {{ request.user.username | title }}, <br>Welcome Order Foods
+                        & Delivery</span>
                     <h2 class="author">{{ user.post.author }}</h2>
                     <li class="nav-item {% if request.path == account_logout %} active {% endif %}">
                         <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>

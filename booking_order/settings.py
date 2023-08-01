@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 import dj_database_url
+import cloudinary
 
 
 if os.path.isfile('env.py'):
@@ -34,7 +35,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-rqisl-portfolio-project-2n9gn2h1od.us2.codeanyapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-rqisl-portfolio-project-2n9gn2h1od.us2.codeanyapp.com',
                  'order-booking-online-f33d634e6883.herokuapp.com',
