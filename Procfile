@@ -1,2 +1,2 @@
-web: gunicorn booking_order.wsgi
+web: gunicorn booking_order.wsgi:application
 
