@@ -12,5 +12,4 @@ urlpatterns = [
          name='order-confirmation'),
     path('payment-confirmation/', OrderPayConfirmation.as_view(),
          name='payment-confirmation'),
-    # path('order_foods/', Order_Foods.as_view(), name='order_foods'),
 ]

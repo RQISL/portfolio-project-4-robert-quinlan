@@ -9,9 +9,8 @@ body {
     color: #4a4a4f;
 }
 
-.p-2{
-    padding-left: $spacer !important;
-    color:#fff;
+.p-2 {
+    color: #fff;
 }
 
 .text-white {
@@ -44,13 +43,39 @@ body {
     color: #2A2F33;
 }
 
-/* Login style */
 .container {
     background-color: #BBB6A5;
     margin-top: 150px;
     padding: 20px 0 50px;
     border-radius: 50px;
 }
+
+img.meal_img {
+    border: white solid 15px;
+    margin: 30px -20px -50px 0;
+
+}
+
+.text_box_1 {
+    width: 80%;
+    margin-top: 60px;
+    padding: 10px;
+}
+
+img.dessert_img {
+    border: white solid 15px;
+    margin: -130px 0 50px -70px;
+}
+
+.text_box_2 {
+    width: 75%;
+    margin: 70px 0 0 185px;
+}
+
+.bottom_space {
+    margin-bottom: 70px;
+}
+
 
 .card {
     border: none;
@@ -65,11 +90,11 @@ body {
     position: absolute;
     top: 4%;
     min-width: 20%;
-    left:40%;
-    text-align:center;
-    background-color:#BBB6A5;
-    padding:20px;
-    color:#2A2F33;
+    left: 40%;
+    text-align: center;
+    background-color: #BBB6A5;
+    padding: 20px;
+    color: #2A2F33;
 }
 
 .author {
