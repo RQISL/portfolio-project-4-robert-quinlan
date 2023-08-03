@@ -1,4 +1,5 @@
 from django.db import models
+import cloudinary
 from cloudinary.models import CloudinaryField
 
 
@@ -31,8 +32,6 @@ class OrderModel(models.Model):
     city = models.CharField(max_length=50, blank=True)
     county = models.CharField(max_length=15, blank=True)
     eirecode = models.CharField(max_length=8, blank=True)
-    is_paid = models.BooleanField(default=False)
-    is_shipped = models.BooleanField(default=False)
 
     def __str__(self):
         return f'Order: {self.created_on.strftime("%b %d %I: %M %p")}'

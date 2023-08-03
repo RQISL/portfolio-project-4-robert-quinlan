@@ -20,6 +20,8 @@ class Order(View):
         # get every item from each category
         appetizers = MenuItem.objects.filter(
             category__name__contains='Appetizer')
+        fruits = MenuItem.objects.filter(
+            category__name__contains='Fruit')
         entres = MenuItem.objects.filter(category__name__contains='Entre')
         desserts = MenuItem.objects.filter(category__name__contains='Dessert')
         drinks = MenuItem.objects.filter(category__name__contains='Drink')
@@ -27,6 +29,7 @@ class Order(View):
         # pass into context
         context = {
             'appetizers': appetizers,
+            'fruits': fruits,
             'entres': entres,
             'desserts': desserts,
             'drinks': drinks,
@@ -77,28 +80,20 @@ class Order(View):
         )
         order.items.add(*item_ids)
 
-        # After everything is done, send confirmation email to the user
-        body = ('Thank you for your order! Your food is being made and will be delivered soon!\n'
-                f'Your total: {price}\n'
-                'Thank you again for your order!')
+        # # After everything is done, send confirmation email to the user
+        # body = ('Thank you for your order! Your food is being made and will be delivered soon!\n'
+        #         f'Your total: {price}\n'
+        #         'Thank you again for your order!')
 
-        # send_mail(
-        #     'Thank You For Your Order!',
-        #     body,
-        #     'example@example.com',
-        #     [email],
-        #     fail_silently=False
-        # )
-
-        context = {
-            'items': order_items['items'],
-            'price': price
-        }
+        # context = {
+        #     'items': order_items['items'],
+        #     'price': price
+        # }
 
         return redirect('order-confirmation', pk=order.pk)
 
 
-class OrderConfirmation(View):
+class OrderPayConfirmation(View):
     def get(self, request, pk, *args, **kwargs):
         order = OrderModel.objects.get(pk=pk)
 
@@ -108,19 +103,4 @@ class OrderConfirmation(View):
             'price': order.price,
         }
 
-        return render(request, 'order_confirmation.html', context)
-
-    def post(self, request, pk, *args, **kwargs):
-        data = json.loads(request.body)
-
-        if data['isPaid']:
-            order = OrderModel.objects.get(pk=pk)
-            order.is_paid = True
-            order.save()
-
-        return redirect('payment-confirmation')
-
-
-class OrderPayConfirmation(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'order_pay_confirmation.html')
+        return render(request, 'order_pay_confirmation.html', context)
