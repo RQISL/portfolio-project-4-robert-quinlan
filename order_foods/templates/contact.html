@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <form class="container-fluid col-10">
+
+        <div class="row mb-3">
+            <div class="col">
+                <h1 class="d-flex justify-content-center">Contact Us</h1>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="inputFirstName4" class="form-label fs-4">First Name</label>
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+                <label for="inputLastName4" class="form-label fs-4">Last Name</label>
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="inputEmail4" class="form-label fs-4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="example@yourmail.com">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="floatingTextarea2" class="form-label fs-4">Comments</label>
+            <div class="form-floating">
+                <textarea class="form-control" id="floatingTextarea2" placeholder="Leave a comment here"
+                    style="height: 100px"></textarea>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <button type="submit" class="btn btn-dark fs-4">Sign in</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -15,6 +15,21 @@ class About(View):
         return render(request, 'aboutus.html')
 
 
+class Contact(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'contact.html')
+
+
+class Login(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'accounts/login.html')
+
+
+class Sign_up(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'accounts/signup.html')
+
+
 class Order(View):
     def get(self, request, *args, **kwargs):
         # get every item from each category
@@ -79,16 +94,6 @@ class Order(View):
             eirecode=eirecode
         )
         order.items.add(*item_ids)
-
-        # # After everything is done, send confirmation email to the user
-        # body = ('Thank you for your order! Your food is being made and will be delivered soon!\n'
-        #         f'Your total: {price}\n'
-        #         'Thank you again for your order!')
-
-        # context = {
-        #     'items': order_items['items'],
-        #     'price': price
-        # }
 
         return redirect('order-confirmation', pk=order.pk)
 
