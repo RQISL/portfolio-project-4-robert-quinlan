@@ -37,7 +37,6 @@ class OrderModel(models.Model):
         return f'Order: {self.created_on.strftime("%b %d %I: %M %p")}'
 
 
-# Create your views here.
 def contact_view(request):
     form = ContactForm()
     context = {'form': form}

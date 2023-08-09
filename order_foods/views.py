@@ -1,7 +1,6 @@
 import json
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from django.core.mail import send_mail
 from .models import MenuItem, Category, OrderModel
 
 
@@ -28,6 +27,13 @@ class Login(View):
 class Sign_up(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'accounts/signup.html')
+
+
+class DirectFoods(View):
+    def post(self, request, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            order = OrderModel.objects.get(pk=pk)
+            return redirect('direct_foods',)
 
 
 class Order(View):
@@ -109,3 +115,9 @@ class OrderPayConfirmation(View):
         }
 
         return render(request, 'order_pay_confirmation.html', context)
+
+    def delete_item(self, request, item_id):
+        item = get_object_or_404(OrderPayConfirmation, id=item_id)
+        item.delete()
+
+        return redirect(OrderPayConfirmation)

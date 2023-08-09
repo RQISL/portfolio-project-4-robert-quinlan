@@ -40,7 +40,25 @@
                     srcset="https://res.cloudinary.com/dhl4uxgix/image/upload/v1690182554/static/cloudinary/html/Order_logo_haolrb.png 3700w"
                     src="https://res.cloudinary.com/dhl4uxgix/image/upload/v1690182554/static/cloudinary/html/Order_logo_haolrb.png"
                     alt="Order food location logo" sizes="60vw" class="d-inline-block align-text-middle" alt=""><span
-                    class="p-2">Order Foods & Delivery</span></a>
+                    class="p-2 pt-5 text-white">Order Foods & Delivery</span></a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                {% if user.is_authenticated %}
+                <span class="image-flash mx-auto">Hello {{ request.user.username | title }}, <br>Welcome Order Foods
+                    & Delivery</span>
+                <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
+                    <a class="nav-link text-white" href="{% url 'order_foods' %}">Order Foods</a>
+                </li>
+                <li class="nav-item {% if request.path == account_logout %} active {% endif %}">
+                    <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
+                    <a class="nav-link text-white" aria-current="page" data-bs-toggle="modal"
+                        data-bs-target="#submitModal_1" href="{% url 'order_foods' %}">Order
+                        Foods</a>
+                </li>
+                {% endif %}
+            </ul>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,42 +72,19 @@
                         <a class="nav-link text-white" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
                     </li>
 
-                    <li class="nav-item {% if request.path == aboutus %} active {% endif %}">
+                    <li class="nav-item {% if request.path == contact %} active {% endif %}">
                         <a class="nav-link text-white" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
                     </li>
-
-                    <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
-                        <a class="nav-link text-white" aria-current="page" data-bs-toggle="modal"
-                            data-bs-target="#submitModal" href="{% url 'order_foods' %}">Order
-                            Foods</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <span class="image-flash mx-auto">Hello {{ request.user.username | title }}, <br>Welcome Order Foods
-                        & Delivery</span>
-                    <li class="nav-item {% if request.path == account_logout %} active {% endif %}">
-                        <a class="nav-link text-white" href="{% url 'order_foods' %}">Order Food Lists</a>
-                    </li>
-                    <li class="nav-item {% if request.path == account_logout %} active {% endif %}">
-                        <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item {% if request.path == account_signup %} active {% endif %}">
-                        <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item {% if request.path == account_login %} active {% endif %}">
-                        <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
-                    </li>
-                    {% endif %}
                 </ul>
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel"
+        <div class="modal fade" id="submitModal_1" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="submitModalLabel">Login / Sign up</h5>
+                        <h5 class="modal-title" id="submitModal_1">Login / Sign up</h5>
                         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
