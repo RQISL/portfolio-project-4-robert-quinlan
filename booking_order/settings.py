@@ -23,7 +23,7 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+# ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
 # Quick-start development settings - unsuitable for production
@@ -35,7 +35,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-rqisl-portfolio-project-2n9gn2h1od.us2.codeanyapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-rqisl-portfolio-project-2n9gn2h1od.us2.codeanyapp.com',
                  'order-booking-online-f33d634e6883.herokuapp.com',
@@ -58,12 +58,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'order_foods.apps.OrderFoodsConfig',
     'bootstrap5',
+    'templates',
 ]
 
 SITE_ID = 1
 
 LOGIN_URL = 'accounts/login'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'order_foods'
 LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
@@ -81,7 +82,7 @@ ROOT_URLCONF = 'booking_order.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,7 +153,9 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 cloudinary.config(
     cloud_name='dhl4uxgix',
