@@ -4,18 +4,6 @@ from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
 
-# Extending User Model Using a One-To-One Link
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-
-    image = CloudinaryField('image')
-
-    bio = models.TextField()
-
-    def __str__(self):
-        return self.user.username
-
-
 class MenuItem(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -48,3 +36,12 @@ class OrderModel(models.Model):
 
     def __str__(self):
         return f'Order: {self.created_on.strftime("%b %d %I: %M %p")}'
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = CloudinaryField('image')
+    bio = models.TextField(max_length=300, blank=True)
+
+    def __str__(self):
+        return self.user.username

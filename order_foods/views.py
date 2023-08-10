@@ -1,7 +1,7 @@
 import json
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import MenuItem, Category, OrderModel
+from .models import MenuItem, Category, OrderModel, Profile
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView, DeleteView
 from django.urls import reverse_lazy
