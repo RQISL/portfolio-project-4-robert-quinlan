@@ -1,10 +1,9 @@
+from .forms import ItemForm
 import json
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import MenuItem, Category, OrderModel, Profile
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import ListView, DeleteView
-from django.urls import reverse_lazy
+from .models import MenuItem, Category, OrderModel, ProfileView
+
 
 
 class Home(View):
@@ -113,19 +112,46 @@ class OrderPayConfirmation(View):
         return render(request, 'order_pay_confirmation.html', context)
 
 
-class ProfileView(View):
+class Profile_View(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'profile.html')
+        profile_view = ProfileView.objects.all()
+
+        context = {'profile_view': profile_view
+                   }
+
+        return render(request, 'profile.html', context)
 
 
-class PayConfirmationView(LoginRequiredMixin, ListView):
-    model = MenuItem
-    template_name: str = 'order_foods.html'
-    context_object_name = 'order_foods'
+class Profile_Update(View):
+    def get(self, request, item_id, *args, **kwargs):
+        item = get_object_or_404(ProfileView, id=item_id)
+        if request.method == 'POST':
+            form = ItemForm(request.POST, instance=item)
+            form.save()
+            return redirect('Profile_View')
+        form = ItemForm(instance=item)
+        context = {
+            'form': form
+        }
+        return render(request, 'profile_update.html', context)
 
 
-class DeleteFood(LoginRequiredMixin, DeleteView):
-    model = MenuItem
-    fields = ['appetizers', 'fruits', 'entres']
-    success_url = "/order_foods"
-    template_name = 'delete_foods.html'
+class Profile_Create(View):
+    def get(self, request, item_id, *args, **kwargs):
+        item = get_object_or_404(ProfileView, id=item_id)
+        if request.method == 'POST':
+            form = ItemForm(request.POST, instance=item)
+            form.save()
+            return redirect('Profile_View')
+        form = ItemForm(instance=item)
+        context = {
+            'form': form
+        }
+        return render(request, 'profile_add.html', context)
+
+
+class Profile_Delete(View):
+    def get(self, request, item_id, *args, **kwargs):
+        item = get_object_or_404(ProfileView, id=item_id)
+        item.delete()
+        return redirect('delete_profile')

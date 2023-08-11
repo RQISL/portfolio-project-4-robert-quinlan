@@ -1,40 +1,45 @@
 {% extends "base.html" %}
-{% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-sm-12 p-5">
-            <div class="text-center">
-                <h2>Profile</h2>
-            </div>
-            <img class="rounded-circle account-img" src="{{ user.image.url }}">
-            <div class="media-body">
-                <h2 class="account-heading">{{ user.username }}</h2>
-                <p class="text-secondary">{{ user.email }}</p>
-            </div>
-        </div>
-    </div>
+{% load static %}
 
-    <form method="POST">
-        {% csrf_token %}
-        <div class="row">
-            <div class="col-md-12 col-sm-12 p-5">
-                <div class="text-center">
-                    <h2>Profile Information</h2>
-                </div>
-                {{ form.as_p }}
-                {{ form.as_p }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-sm-12 p-5">
-                <div class="text-center">
-                    <button type="button" class="btn btn-dark">
-                        Update
-                    </button>
-                </div>
-            </div>
-        </div>
-</div>
-</form>
-</div>
+{% block content %}
+
+<h1>Things I need to do:</h1>
+
+<table>
+    {% for item in profile_view %}
+    <tr>
+        {% if item.user %}
+        <td class="text-white">
+            <img class="rounded" src="{{ item.image.url }}" width="150" height="100" />
+        </td>
+        <td class="text-white">{{ item.user }}</td>
+        <td class="text-white">{{ item.bio }}</td>
+        {% else %}
+        <td class="text-white">{{ item.user }}</td>
+        <td class="text-white">{{ item.bio }}</td>
+        <td>
+        </td>
+        {% endif %}
+        <a href="/add/{{ item.id }}">
+            <button>Add</button>
+        </a>
+        <td>
+            <a href="/update/{{ item.id }}">
+                <button>Edit</button>
+            </a>
+        </td>
+
+        <td>
+            <a href="/delete/{{ item.id }}">
+                <button>Delete</button>
+            </a>
+        </td>
+        {% endfor %}
+
+
+    </tr>
+
+</table>
+
+
 {% endblock content %}

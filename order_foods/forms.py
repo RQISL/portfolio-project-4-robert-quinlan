@@ -1,8 +1,7 @@
+from .models import ProfileView
 from django.contrib.auth.models import User
 from django import forms
-
-
-from .models import Profile
+from django.urls import reverse_lazy
 
 
 class LoginForm(forms.Form):
@@ -19,3 +18,10 @@ class ContactForm(forms.Form):
     def send_email(self):
         # send email using the self.cleaned_data dictionary
         pass
+
+
+class ItemForm(forms.ModelForm):
+    class Meta:
+        model = ProfileView
+        fields = ['user', 'bio', 'image']
+

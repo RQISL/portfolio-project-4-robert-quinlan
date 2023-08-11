@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
-from order_foods.views import Home, About, Login, Contact, ProfileView
-from order_foods.views import Sign_up, Order, OrderPayConfirmation, DeleteFood
+from order_foods.views import (Home, About, Login, Contact, Profile_View,
+                               Profile_Update, Sign_up, Order,
+                               OrderPayConfirmation, Profile_Delete,
+                               Profile_Create
+                               )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,8 +30,13 @@ urlpatterns = [
     path('order_foods/', Order.as_view(), name='order_foods'),
     path('order-confirmation/<int:pk>', OrderPayConfirmation.as_view(),
          name='order-confirmation'),
-    path('<pk>/delete/', DeleteFood.as_view(), name='delete_foods'),
+    path('profile/', Profile_View.as_view(), name='profile'),
+    path('add/<item_id>',
+         Profile_Create.as_view(), name='profile_add'),
+    path('update/<item_id>',
+         Profile_Update.as_view(), name='profile_update'),
+    path('delete/<item_id>',
+         Profile_Delete.as_view(), name='delete_profile'),
     path('acoounts/login/', Login.as_view(), name='login'),
     path('accounts/signup/', Sign_up.as_view(), name='signup'),
-    path('profile/', ProfileView.as_view(), name='profile'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
