@@ -2,6 +2,7 @@ from django.db import models
 import cloudinary
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 class MenuItem(models.Model):
@@ -39,7 +40,8 @@ class OrderModel(models.Model):
 
 
 class ProfileView(models.Model):
-    user = models.CharField(max_length=100, null=False, blank=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, null=False, blank=False)
     bio = models.TextField()
     image = CloudinaryField('image')
 

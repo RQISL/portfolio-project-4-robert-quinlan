@@ -3,19 +3,21 @@
 
 {% block content %}
 
-<h1>Things I need to do:</h1>
+<h1>Profile</h1>
 
 <table>
     {% for item in profile_view %}
     <tr>
         {% if item.user %}
         <td class="text-white">
-            <img class="rounded" src="{{ item.image.url }}" width="150" height="100" />
+            <img class="rounded-circle" src="{{ item.image.url }}" width="150" height="100" />
         </td>
         <td class="text-white">{{ item.user }}</td>
+        <td class="text-white">{{ item.name }}</td>
         <td class="text-white">{{ item.bio }}</td>
         {% else %}
         <td class="text-white">{{ item.user }}</td>
+        <td class="text-white">{{ item.name }}</td>
         <td class="text-white">{{ item.bio }}</td>
         <td>
         </td>

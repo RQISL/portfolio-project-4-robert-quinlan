@@ -1,8 +1,9 @@
 from .forms import ItemForm
 import json
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import View
 from .models import MenuItem, Category, OrderModel, ProfileView
+from django.http import HttpResponseRedirect
 
 
 
@@ -128,12 +129,23 @@ class Profile_Update(View):
         if request.method == 'POST':
             form = ItemForm(request.POST, instance=item)
             form.save()
-            return redirect('Profile_View')
+            return redirect('profile_view')
         form = ItemForm(instance=item)
         context = {
             'form': form
         }
+
         return render(request, 'profile_update.html', context)
+
+    def post(self, request, item_id, *args, **kwargs):
+        item = get_object_or_404(ProfileView, id=item_id)
+        if request.method == 'POST':
+            form = ItemForm(request.POST, instance=item)
+            form.save()
+        else:
+            item = ProfileView()
+
+        return HttpResponseRedirect(reverse('profile_update', args=[item_id]))
 
 
 class Profile_Create(View):
