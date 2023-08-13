@@ -1,11 +1,13 @@
 {% load static %}
 
+<!-- for Link Active in navbar -->
 {% url 'home' as home %}
 {% url 'order_foods' as order_foods %}
 {% url 'aboutus' as aboutus %}
+{% url 'contact' as contact %}
+{% url 'profile' as profile %}
 {% url 'account_logout' as account_logout %}
-{% url 'account_signup' as account_signup %}
-{% url 'account_login' as account_login %}
+
 
 
 <!DOCTYPE html>
@@ -20,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
@@ -39,43 +41,41 @@
             <a class="navbar-brand" href="{% url 'home' %}"><img
                     srcset="https://res.cloudinary.com/dhl4uxgix/image/upload/v1690182554/static/cloudinary/html/Order_logo_haolrb.png 3700w"
                     src="https://res.cloudinary.com/dhl4uxgix/image/upload/v1690182554/static/cloudinary/html/Order_logo_haolrb.png"
-                    alt="Order food location logo" sizes="60vw" class="d-inline-block align-text-middle" alt=""><span
-                    class="p-2 pt-5 text-white">Order Foods & Delivery</span></a>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                {% if user.is_authenticated %}
-                <span class="image-flash mx-auto">Hello {{ request.user.username | title }}, <br>Welcome Order Foods
-                    & Delivery</span>
-                <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
-                    <a class="nav-link text-white" href="{% url 'order_foods' %}">Order Foods</a>
-                </li>
-                <li class="nav-item {% if request.path == profile %} active {% endif %}">
-                    <a class="nav-link text-white" href="{% url 'profile' %}">Profile</a>
-                </li>
-                <li class="nav-item {% if request.path == account_logout %} active {% endif %}">
-                    <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
-                    <a class="nav-link text-white" aria-current="page" data-bs-toggle="modal"
-                        data-bs-target="#submitModal_1" href="{% url 'order_foods' %}">Order
-                        Foods</a>
-                </li>
-                {% endif %}
-            </ul>
+                    alt="Order food location logo" sizes="80vw" class="d-inline-block align-text-middle"
+                    alt="Order food location logo"><span class="p-2 pt-5 textlogo text-white">Order Foods &
+                    Delivery</span></a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item {% if request.path == home %} active {% endif %}">
+                    <li class="nav-item {% if request.path == home %}active{% endif %}">
                         <a class="nav-link text-white" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
-                    <li class="nav-item {% if request.path == aboutus %} active {% endif %}">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item {% if request.path == order_foods %}active{% endif %}">
+                        <a class="nav-link text-white" href="{% url 'order_foods' %}">Order Foods</a>
+                    </li>
+                    <li class="nav-item {% if request.path == profile %}active{% endif %}">
+                        <a class="nav-link text-white" href="{% url 'profile' %}">Profile</a>
+                    </li>
+                    <li class="nav-item {% if request.path == account_logout %}active{% endif %}">
+                        <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item {% if request.path == order_foods %} active {% endif %}">
+                        <a class="nav-link text-white" aria-current="page" data-bs-toggle="modal"
+                            data-bs-target="#submitModal_1" href="{% url 'order_foods' %}">Order
+                            Foods</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item {% if request.path == aboutus %}active{% endif %}">
                         <a class="nav-link text-white" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
                     </li>
 
-                    <li class="nav-item {% if request.path == contact %} active {% endif %}">
+                    <li class="nav-item {% if request.path == contact %}active{% endif %}">
                         <a class="nav-link text-white" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
                     </li>
                 </ul>

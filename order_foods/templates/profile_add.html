@@ -6,7 +6,7 @@
 
 <h1>Profile Create</h1>
 
-<form method="POST" action="{{ Profile_View }}">
+<form method="POST" action="{{ Profile_View }}" enctype="multipart/form-data">
     {% csrf_token %}
 
     <table>

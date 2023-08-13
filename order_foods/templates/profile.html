@@ -20,6 +20,7 @@
                     {% else %}
                     <td class="text-white">{{ item.user }}</td>
                     <td class="text-white">{{ item.bio }}</td>
+
                     {% endif %}
                     <td>
                         <a href="/update/{{ item.id }}">
@@ -38,22 +39,11 @@
                 </tr>
             </table>
         </div>
+        <p>
+            <a href="{% url 'profile_add' %}">
+                <button>Add</button>
+            </a>
+        </p>
     </div>
-</div>
-<form method="POST" action="{{ Profile_View }}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <table>
-        <tr>
-            <td>
-                <a href="/add/{{ item.id }}">
-                    <button>Add</button>
-                </a>
-            </td>
-        </tr>
-    </table>
-</form>
 
-
-
-{% endblock content %}
+    {% endblock content %}

@@ -147,28 +147,26 @@ class Profile_Update(View):
 
 
 class Profile_Create(View):
-    def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, id=item_id)
+    def get(self, request, *args, **kwargs):
         if request.method == 'POST':
-            form = ItemForm(request.POST, instance=item)
+            form = ItemForm(request.POST)
             form.save()
-            return redirect('profile_view')
-        form = ItemForm(instance=item)
+        form = ItemForm()
         context = {
             'form': form
         }
-
         return render(request, 'profile_add.html', context)
 
-    def post(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, id=item_id)
+    def post(self, request, *args, **kwargs):
+        form = ItemForm(request.POST, request.FILES)
         if request.method == 'POST':
-            form = ItemForm(request.POST, instance=item)
-            form.save()
-        else:
-            item = ProfileView()
 
-        return redirect('profile')
+            if form.is_valid():
+                user = request.POST.get('user')
+                bio = request.POST.get('bio')
+                image = request.POST.get('image')
+                form.save()
+                return redirect('profile')
 
 
 class Profile_Delete(View):
