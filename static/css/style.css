@@ -54,32 +54,6 @@ body {
     border-radius: 50px;
 }
 
-img.meal_img {
-    border: white solid 15px;
-    margin: 30px -20px -50px 0;
-
-}
-
-.text_box_1 {
-    width: 80%;
-    margin-top: 60px;
-    padding: 10px;
-}
-
-img.dessert_img {
-    border: white solid 15px;
-    margin: -130px 0 50px -70px;
-}
-
-.text_box_2 {
-    width: 75%;
-    margin: 70px 0 0 185px;
-}
-
-.bottom_space {
-    margin-bottom: 70px;
-}
-
 .btn-signup {
     background-color: #2A2F33;
     color: #fff;
@@ -102,14 +76,6 @@ img.dessert_img {
     text-decoration: none;
 }
 
-@media screen and (max-height: 450px) {
-
-    span.text-white,
-    .box5 {
-        font-size: 0.5em;
-    }
-}
-
 /* Navbar bottom boarder line*/
 
 nav {
@@ -130,4 +96,22 @@ li:hover {
 
 .navbar-toggler {
     background-color: rgba(187, 182, 165, 1.000)
+}
+
+@media only screen and (min-width: 320px) and (max-width: 660px) {
+
+    span.h4 {
+        font-size: 0.6em;
+    }
+
+    .navbar-toggler {
+        font-size: 0.6em;
+    }
+
+    .navbar-nav {
+        border: red solid 5px;
+        text-align: center;
+        font-size: 0.9em;
+        padding-left: 40px;
+    }
 }

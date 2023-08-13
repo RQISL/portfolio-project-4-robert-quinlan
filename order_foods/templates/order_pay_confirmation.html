@@ -13,12 +13,6 @@
                     <p>{{ item.name }} <span class="pl-3"><span id="boot-icon" class="bi bi-currency-euro"
                                 style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ item.price }}</span></p>
                 </div>
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="task-controls">
-                        <a class="delete-link" href="{% url 'delete_foods' item.id %}">Delete</a>
-                    </div>
-                </form>
             </div>
             {% endfor %}
             <hr>
