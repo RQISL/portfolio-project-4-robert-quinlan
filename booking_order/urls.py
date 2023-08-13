@@ -36,7 +36,7 @@ urlpatterns = [
     path('update/<item_id>',
          Profile_Update.as_view(), name='profile_update'),
     path('delete/<item_id>',
-         Profile_Delete.as_view(), name='delete_profile'),
+         Profile_Delete.as_view(), name='profile'),
     path('acoounts/login/', Login.as_view(), name='login'),
     path('accounts/signup/', Sign_up.as_view(), name='signup'),
 ]

@@ -16,6 +16,12 @@ from pathlib import Path
 import dj_database_url
 import cloudinary
 
+from django.contrib.messages import constants as messages
+
+
+MESSAGE_TAGS = {
+    messages.SUCCESS: 'alert-success',
+}
 
 if os.path.isfile('env.py'):
     import env

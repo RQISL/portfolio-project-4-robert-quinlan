@@ -8,7 +8,14 @@
 
 <form method="POST" action="{{ Profile_View }}">
     {% csrf_token %}
-    {{ form.as_p }}
+
+    <table>
+        <tr>
+            <td class="text-white">{{ form.as_p }}</td>
+
+        </tr>
+    </table>
+
     <div>
         <p>
             <button type="submit">Save</button>
