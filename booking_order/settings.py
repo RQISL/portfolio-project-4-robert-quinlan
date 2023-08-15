@@ -44,7 +44,7 @@ CSRF_TRUSTED_ORIGINS = [
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-rqisl-portfolioproject-d4cbkjh23oi.ws-eu103.gitpod.io',
-                'order-foods-online-3e149702663b.herokuapp.com'
+               'order-foods-online-3e149702663b.herokuapp.com'
                  'localhost']
 
 
