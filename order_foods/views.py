@@ -34,19 +34,19 @@ class Sign_up(View):
 class Order(View):
     def get(self, request, *args, **kwargs):
         # get every item from each category
-        appetizers = MenuItem.objects.filter(
-            category__name__contains='Appetizer')
-        fruits = MenuItem.objects.filter(
-            category__name__contains='Fruit')
-        entres = MenuItem.objects.filter(category__name__contains='Entre')
+        starters = MenuItem.objects.filter(
+            category__name__contains='Starter')
+        soups = MenuItem.objects.filter(
+            category__name__contains='Soup')
+        mains = MenuItem.objects.filter(category__name__contains='Main')
         desserts = MenuItem.objects.filter(category__name__contains='Dessert')
         drinks = MenuItem.objects.filter(category__name__contains='Drink')
 
         # pass into context
         context = {
-            'appetizers': appetizers,
-            'fruits': fruits,
-            'entres': entres,
+            'starters': starters,
+            'soups': soups,
+            'mains': mains,
             'desserts': desserts,
             'drinks': drinks,
         }

@@ -3,56 +3,91 @@
 
 
 {% block content %}
-<div class="container mb-1">
+<div class="container my-5">
     <div class="row">
-        <div class="col-md-12 col-sm-12 p-5">
+        <div class="col-md-12 col-sm-12 p-3">
             <div class="text-center">
                 <h2>Order Foods</h2>
             </div>
             <form method="POST">
                 {% csrf_token %}
-                <div class="pt-1">
-                    <h3>Starter</h3>
-                    {% for app in appetizers %}
+                <div class="dark-bg">
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Starter
+                    </button>
+                    <div class="collapse border border-bottom-0 border-5" id="collapseExample">
+                        <div class="card card-body dark-bg text-white">
+                            {% for starter in starters %}
 
+                            <div class="row">
+                                <div class="col-md-2 col-sm-12">
+                                    <img class="rounded" src="{{ starter.image.url }}" width="150" height="100" />
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="d-flex flex-row">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" name="items[]" class="form-check-input"
+                                                value="{{ starter.pk }}">
+                                            <label class="form-check-label">{{ starter.name }}</label>
+                                        </div>
+                                        <p class="font-weight-bold ps-5 box5"><span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ starter.price }}
+                                        </p>
+                                    </div>
+                                    <p>{{ starter.description }}</p>
+                                </div>
+                            </div>
+                            <hr />
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-5">
+                    <h3>Soup</h3>
+                    {% for soup in soups %}
                     <div class="row">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ app.image.url }}" width="150" height="100" />
+                            <img class="rounded" src="{{ soup.image.url }}" width="150" height="100" />
                         </div>
-                        <div class="col-md-8 col-sm-12">
+                        <div class="col-md-8 col-sm-12 ">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ app.pk }}">
-                                    <label class="form-check-label">{{ app.name }}</label>
+                                    <input type="checkbox" name="items[]" class="form-check-input"
+                                        value="{{ soup.pk }}">
+                                    <label class="form-check-label">{{ soup.name }}</label>
                                 </div>
                                 <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ app.price }}</p>
+                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ soup.price }}</p>
                             </div>
-                            <p>{{ app.description }}</p>
+                            <p>{{ soup.description }}</p>
                         </div>
                     </div>
                     <hr />
                     {% endfor %}
                 </div>
 
-                <div class="pt-5">
-                    <h3>Soup</h3>
-                    {% for entre in entres %}
+                <div class="pt-5 ">
+                    <h3>Mains</h3>
+                    {% for main in mains %}
                     <div class="row">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ entre.image.url }}" width="150" height="100" />
+                            <img class="rounded" src="{{ main.image.url }}" width="150" height="100" />
                         </div>
-                        <div class="col-md-8 col-sm-12 ">
+                        <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
                                 <div class="form-group form-check">
                                     <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ entre.pk }}">
-                                    <label class="form-check-label">{{ entre.name }}</label>
+                                        value="{{ main.pk }}">
+                                    <label class="form-check-label">{{ main.name }}</label>
                                 </div>
                                 <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ entre.price }}</p>
+                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ main.price }}</p>
                             </div>
-                            <p>{{ entre.description }}</p>
+                            <p>{{ main.description }}</p>
                         </div>
                     </div>
                     <hr />
@@ -85,35 +120,11 @@
                 </div>
 
                 <div class="pt-5 ">
-                    <h3>Fruits</h3>
-                    {% for fruit in fruits %}
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ fruit.image.url }}" width="150" height="100" />
-                        </div>
-                        <div class="col-md-8 col-sm-12">
-                            <div class="d-flex flex-row">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ fruit.pk }}">
-                                    <label class="form-check-label">{{ fruit.name }}</label>
-                                </div>
-                                <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ fruit.price }}</p>
-                            </div>
-                            <p>{{ fruit.description }}</p>
-                        </div>
-                    </div>
-                    <hr />
-                    {% endfor %}
-                </div>
-
-                <div class="pt-5 ">
                     <h3>Drinks</h3>
                     {% for drink in drinks %}
                     <div class="row">
                         <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ drink.image.url }}" width="150" height="100" />
+                            <img class="rounded img-fuild" src="{{ drink.image.url }}" />
                         </div>
                         <div class="col-md-8 col-sm-12">
                             <div class="d-flex flex-row">
@@ -169,14 +180,16 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#submitModal">
-                    Submit Order!
-                </button>
-                <!-- <button class="btn btn-dark mt-5">Place Order!</button> -->
+                <div class="  w-100 text-center">
+                    <button type="button" class="btn btn-dark container-fluid w-75" data-bs-toggle="modal"
+                        data-bs-target="#submitModal">
+                        Submit Order!
+                    </button>
+                </div>
 
                 <!-- Modal -->
-
                 <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
