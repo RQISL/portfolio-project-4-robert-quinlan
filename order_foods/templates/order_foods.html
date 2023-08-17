@@ -6,37 +6,36 @@
 <div class="container my-5">
     <div class="row">
         <div class="col-md-12 col-sm-12 p-3">
-            <div class="text-center">
+            <div class="text-center mb-4">
                 <h2>Order Foods</h2>
             </div>
             <form method="POST">
                 {% csrf_token %}
                 <div class="dark-bg">
                     <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-                        aria-controls="collapseExample">
+                        data-bs-toggle="collapse" data-bs-target="#starter" aria-expanded="false"
+                        aria-controls="starter">
                         Starter
                     </button>
-                    <div class="collapse border border-bottom-0 border-5" id="collapseExample">
+                    <div class="collapse border border-bottom-0 border-5" id="starter">
                         <div class="card card-body dark-bg text-white">
                             {% for starter in starters %}
 
                             <div class="row">
-                                <div class="col-md-2 col-sm-12">
-                                    <img class="rounded" src="{{ starter.image.url }}" width="150" height="100" />
+                                <div class="col-xl-3 text-center">
+                                    <img class="rounded img-fluid" src="{{ starter.image.url }}" width="350" height="200" />
                                 </div>
-                                <div class="col-md-8 col-sm-12">
+                                <div class="col-xl-9">
                                     <div class="d-flex flex-row">
                                         <div class="form-group form-check">
                                             <input type="checkbox" name="items[]" class="form-check-input"
                                                 value="{{ starter.pk }}">
-                                            <label class="form-check-label">{{ starter.name }}</label>
-                                        </div>
-                                        <p class="font-weight-bold ps-5 box5"><span id="boot-icon"
+                                            <label class="form-check-label">{{ starter.name }}<span id="boot-icon"
                                                 class="bi bi-currency-euro"
-                                                style="font-size: 1rem; color: bisque;"></span>{{ starter.price }}
-                                        </p>
+                                                style="font-size: 1rem; color: bisque;"></span>{{ starter.price }}</label>
+                                        </div>
                                     </div>
+                                    <hr />
                                     <p>{{ starter.description }}</p>
                                 </div>
                             </div>
@@ -45,103 +44,148 @@
                         </div>
                     </div>
                 </div>
+            <br>
+                <div class="dark-bg">
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#soup" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Soup
+                    </button>
+                    <div class="collapse border border-bottom-0 border-5" id="soup">
+                        <div class="card card-body dark-bg text-white">
+                            {% for soup in soups %}
 
-                <div class="pt-5">
-                    <h3>Soup</h3>
-                    {% for soup in soups %}
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ soup.image.url }}" width="150" height="100" />
-                        </div>
-                        <div class="col-md-8 col-sm-12 ">
-                            <div class="d-flex flex-row">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ soup.pk }}">
-                                    <label class="form-check-label">{{ soup.name }}</label>
+                            <div class="row">
+                                <div class="col-xl-3 text-center">
+                                    <img class="rounded img-fluid" src="{{ soup.image.url }}" width="350" height="200" />
                                 </div>
-                                <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ soup.price }}</p>
+                                <div class="col-xl-9 ">
+                                    <div class="d-flex flex-row">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" name="items[]" class="form-check-input"
+                                                value="{{ soup.pk }}">
+                                            <label class="form-check-label">{{ soup.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ soup.price }}</label>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <p>{{ soup.description }}</p>
+                                </div>
                             </div>
-                            <p>{{ soup.description }}</p>
+                            <hr />
+                            {% endfor %}
                         </div>
                     </div>
-                    <hr />
-                    {% endfor %}
                 </div>
 
-                <div class="pt-5 ">
-                    <h3>Mains</h3>
-                    {% for main in mains %}
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ main.image.url }}" width="150" height="100" />
-                        </div>
-                        <div class="col-md-8 col-sm-12">
-                            <div class="d-flex flex-row">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ main.pk }}">
-                                    <label class="form-check-label">{{ main.name }}</label>
+                <br>
+                <div class="dark-bg">
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#main" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Main
+                    </button>
+                    <div class="collapse border border-bottom-0 border-5" id="main">
+                        <div class="card card-body dark-bg text-white">
+                            {% for main in mains %}
+
+                            <div class="row">
+                                <div class="col-xl-3 text-center">
+                                    <img class="rounded img-fluid" src="{{ main.image.url }}" width="350" height="200" />
                                 </div>
-                                <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ main.price }}</p>
+                                <div class="col-xl-9 ">
+                                    <div class="d-flex flex-row">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" name="items[]" class="form-check-input"
+                                                value="{{ main.pk }}">
+                                            <label class="form-check-label">{{ main.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ main.price }}</label>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <p>{{ main.description }}</p>
+                                </div>
                             </div>
-                            <p>{{ main.description }}</p>
+                            <hr />
+                            {% endfor %}
                         </div>
                     </div>
-                    <hr />
-                    {% endfor %}
                 </div>
 
-                <div class="pt-5">
-                    <h3>Desserts</h3>
-                    {% for dessert in desserts %}
 
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded" src="{{ dessert.image.url }}" width="150" height="100" />
-                        </div>
-                        <div class="col-md-8 col-sm-12">
-                            <div class="d-flex flex-row">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ dessert.pk }}">
-                                    <label class="form-check-label">{{ dessert.name }}</label>
+                <br>
+                <div class="dark-bg">
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#dessert" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Dessert
+                    </button>
+                    <div class="collapse border border-bottom-0 border-5" id="dessert">
+                        <div class="card card-body dark-bg text-white">
+                            {% for dessert in desserts %}
+
+                            <div class="row">
+                                <div class="col-xl-3 text-center">
+                                    <img class="rounded img-fluid" src="{{ dessert.image.url }}" width="350" height="200" />
                                 </div>
-                                <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ dessert.price }}</p>
+                                <div class="col-xl-9 ">
+                                    <div class="d-flex flex-row">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" name="items[]" class="form-check-input"
+                                                value="{{ soup.pk }}">
+                                            <label class="form-check-label">{{ dessert.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ dessert.price }}</label>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <p>{{ dessert.description }}</p>
+                                </div>
                             </div>
-                            <p>{{ dessert.description }}</p>
+                            <hr />
+                            {% endfor %}
                         </div>
                     </div>
-                    <hr />
-                    {% endfor %}
                 </div>
 
-                <div class="pt-5 ">
-                    <h3>Drinks</h3>
-                    {% for drink in drinks %}
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <img class="rounded img-fuild" src="{{ drink.image.url }}" />
-                        </div>
-                        <div class="col-md-8 col-sm-12">
-                            <div class="d-flex flex-row">
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="items[]" class="form-check-input"
-                                        value="{{ drink.pk }}">
-                                    <label class="form-check-label">{{ drink.name }}</label>
+                <br>
+                <div class="dark-bg">
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#drink" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Drink
+                    </button>
+                    <div class="collapse border border-bottom-0 border-5" id="drink">
+                        <div class="card card-body dark-bg text-white">
+                            {% for drink in drinks %}
+
+                            <div class="row">
+                                <div class="col-xl-3 text-center">
+                                    <img class="rounded img-fluid" src="{{ drink.image.url }}" width="350" height="200" />
                                 </div>
-                                <p class="font-weight-bold ps-5"><span id="boot-icon" class="bi bi-currency-euro"
-                                        style="font-size: 1rem; color: rgb(0, 0, 0);"></span>{{ drink.price }}</p>
+                                <div class="col-xl-9 ">
+                                    <div class="d-flex flex-row">
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" name="items[]" class="form-check-input"
+                                                value="{{ drink.pk }}">
+                                            <label class="form-check-label">{{ drink.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ drink.price }}</label>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <p>{{ drink.description }}</p>
+                                </div>
                             </div>
-                            <p>{{ drink.description }}</p>
+                            <hr />
+                            {% endfor %}
                         </div>
                     </div>
-                    <hr />
-                    {% endfor %}
                 </div>
+
+            
 
                 <div class="form-group pt-3">
                     <label for="name">Full Name</label>
@@ -182,7 +226,7 @@
                 </div>
 
                 <!-- Button trigger modal -->
-                <div class="  w-100 text-center">
+                <div class="w-100 text-center">
                     <button type="button" class="btn btn-dark container-fluid w-75" data-bs-toggle="modal"
                         data-bs-target="#submitModal">
                         Submit Order!

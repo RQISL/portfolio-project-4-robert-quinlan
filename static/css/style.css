@@ -99,6 +99,11 @@ li:hover {
     background-color: rgba(187, 182, 165, 1.000)
 }
 
+.border_tb{
+    border: solid 10px #2A2F33;
+}
+
+
 @media (min-width: 770px) and (max-width:1250px) {
     span.logo_text {
         font-size: 0.8em;
