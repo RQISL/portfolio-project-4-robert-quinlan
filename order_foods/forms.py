@@ -1,4 +1,4 @@
-from .models import ProfileView
+from .models import ProfileView, ContactView
 from django.contrib.auth.models import User
 from django import forms
 from django.urls import reverse_lazy
@@ -9,15 +9,15 @@ class LoginForm(forms.Form):
     password = forms.CharField(max_length=65, widget=forms.PasswordInput)
 
 
-class ContactForm(forms.Form):
+class ContactForm(forms.ModelForm):
     first_name = forms.CharField()
     last_name = forms.CharField()
     email = forms.CharField()
     message = forms.CharField(widget=forms.Textarea)
 
-    def send_email(self):
-        # send email using the self.cleaned_data dictionary
-        pass
+    class Meta:
+        model = ContactView
+        fields = '__all__'
 
 
 class ItemForm(forms.ModelForm):

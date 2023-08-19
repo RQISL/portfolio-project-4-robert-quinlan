@@ -3,8 +3,8 @@
 
 
 {% block content %}
-<div class="container">
-    <form method="post" class="container-fluid col-10">
+<div class="container my-5">
+    <form method="POST" class="container-fluid col-10">
         {% csrf_token %}
         <div class="row mb-3">
             <div class="col">
@@ -12,27 +12,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col">
-                <label for="inputFirstName4" class="form-label fs-4">First Name</label>{{ form.as_p }}
-                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-            </div>
-            <div class="col">
-                <label for="inputLastName4" class="form-label fs-4">Last Name</label>{{ form.as_p }}
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col">
-                <label for="inputEmail4" class="form-label fs-4">Email</label>{{ form.as_p }}
-                <input type="email" class="form-control" id="inputEmail4" placeholder="example@yourmail.com">
-            </div>
-        </div>
-        <div class="row mb-3">
-            <label for="floatingTextarea2" class="form-label fs-4">Message</label>{{ form.as_p }}
-            <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea2" placeholder="Leave a comment here"
-                    style="height: 100px"></textarea>
-            </div>
+            {{ form }}
         </div>
         <div class="row mb-3">
             <div class="col-12">

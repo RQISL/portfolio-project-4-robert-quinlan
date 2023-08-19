@@ -3,24 +3,22 @@
 
 {% block content %}
 
-
-<h1>Profile Create</h1>
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h1>Create Profile</h1>
+    </div>
 
 <form method="POST" action="{{ Profile_View }}" enctype="multipart/form-data">
     {% csrf_token %}
 
-    <table>
-        <tr>
-            <td class="text-white">{{ form.as_p }}</td>
+    <div class="form-group box4">
+            <div class="form-control-lg ">
+                {{ form.as_p }}
+    </div>
 
-        </tr>
-    </table>
-
-    <div>
-        <p>
-            <button type="submit">Save</button>
-        </p>
+    <div class="form-group w-100 text-center box5">
+            <button class="btn btn-dark container-fluid w-75" type="submit">Save</button>
     </div>
 </form>
-
+</div>
 {% endblock content %}

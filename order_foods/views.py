@@ -1,8 +1,8 @@
-from .forms import ItemForm
+from .forms import ItemForm, ContactForm
 import json
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import MenuItem, Category, OrderModel, ProfileView
+from .models import MenuItem, Category, OrderModel, ProfileView, ContactView
 from django.contrib import messages
 
 
@@ -18,7 +18,32 @@ class About(View):
 
 class Contact(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'contact.html')
+        if request.method == 'POST':
+            form = ContactForm(request.POST)
+            form.save()
+        form = ContactForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'contact.html', context)
+    
+
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST, request.FILES) #You should capture data when request is POST
+        if request.method=="POST":
+            if form.is_valid():
+                form.save()
+                return redirect('thank_you')
+
+            else: #You can leave this away, this is just for simple debugging purposes.
+                print(form.errors) # This too.
+                print(form.non_field_errors()) # This too.
+        
+
+        
+class Thank_You(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'thank_you.html')
 
 
 class Login(View):

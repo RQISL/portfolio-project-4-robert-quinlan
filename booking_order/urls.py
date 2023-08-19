@@ -18,7 +18,7 @@ from django.urls import path, include
 from order_foods.views import (Home, About, Login, Contact, Profile_View,
                                Profile_Update, Sign_up, Order,
                                OrderPayConfirmation, Profile_Delete,
-                               Profile_Create
+                               Profile_Create, Thank_You
                                )
 
 urlpatterns = [
@@ -38,4 +38,5 @@ urlpatterns = [
          Profile_Delete.as_view(), name='profile'),
     path('acoounts/login/', Login.as_view(), name='login'),
     path('accounts/signup/', Sign_up.as_view(), name='signup'),
+    path('thank_you/', Thank_You.as_view(), name='thank_you'),
 ]
