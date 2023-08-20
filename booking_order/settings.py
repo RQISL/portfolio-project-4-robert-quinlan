@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'order_foods.apps.OrderFoodsConfig',
     'bootstrap5',
+    'widget_tweaks',
 ]
 
 SITE_ID = 1

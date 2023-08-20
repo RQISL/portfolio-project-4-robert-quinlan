@@ -11,9 +11,7 @@
                     <button class="btn btn-dark">Add</button>
                 </a>
             </h2>
-            </div>
-               
-                    
+            </div>   
                 <hr>
             
                 {% for item in profile_view %}
@@ -31,6 +29,14 @@
                 </div>
                     </div>
                     {% else %}
+                    <div class="btn">
+                        <a href="/update/{{ item.id }}" style="text-decoration: none;">
+                            <button class="btn btn-dark">Edit</button>
+                        </a>
+                        <a href="/delete/{{ item.id }}">
+                            <button class="btn btn-dark">Delete</button>
+                        </a>
+                    </div>
                    
                     {% endif %}
                     <div class="btn">

@@ -16,9 +16,11 @@
             </div>
             {% endfor %}
             <hr>
-            <p class="font-weight-bold pt-4 text-white">Total:<span id="boot-icon" class="bi bi-currency-euro"
-                    style="font-size: 1rem; "></span> {{ price }}</p>
-            <a href="{% url 'home' %}">Go to the homepage</a>
+            <p class="pt-3" style="font-weight: bolder; font-size: 1.4rem;">Total:<span id="boot-icon" class="bi bi-currency-euro"
+                    style="font-weight: bolder; font-size: 1.4rem; "></span> {{ price }}</p>
+            <a style="text-decoration: none;" href="{% url 'home' %}">
+                <button class="btn btn-dark w-75">Go to the homepage</button>
+            </a>
         </div>
     </div>
 </div>
