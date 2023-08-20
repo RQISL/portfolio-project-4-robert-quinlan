@@ -163,7 +163,7 @@ class Profile_Update(View):
     def post(self, request, item_id, *args, **kwargs):
         item = get_object_or_404(ProfileView, id=item_id)
         if request.method == 'POST':
-            form = ItemForm(request.POST, instance=item)
+            form = ItemForm(request.POST or None, request.FILES or None, instance=item)
             form.save()
         else:
             item = ProfileView()
