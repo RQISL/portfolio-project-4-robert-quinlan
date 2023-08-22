@@ -1,6 +1,10 @@
 {% extends "base.html" %}{% load static %}
 {% block title %}Login{% endblock %}
 
+{% block head %}
+{{ super() }}
+{% endblock %}
+
 {% load i18n %}
 {% load account socialaccount %}
 
