@@ -26,21 +26,19 @@ class Contact(View):
             'form': form
         }
         return render(request, 'contact.html', context)
-    
 
     def post(self, request, *args, **kwargs):
-        form = ContactForm(request.POST, request.FILES) #You should capture data when request is POST
-        if request.method=="POST":
+        form = ContactForm(request.POST, request.FILES)
+        if request.method == "POST":
             if form.is_valid():
                 form.save()
                 return redirect('thank_you')
 
-            else: #You can leave this away, this is just for simple debugging purposes.
-                print(form.errors) # This too.
-                print(form.non_field_errors()) # This too.
-        
+            else:
+                print(form.errors)
+                print(form.non_field_errors())
 
-        
+
 class Thank_You(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'thank_you.html')
@@ -163,7 +161,8 @@ class Profile_Update(View):
     def post(self, request, item_id, *args, **kwargs):
         item = get_object_or_404(ProfileView, id=item_id)
         if request.method == 'POST':
-            form = ItemForm(request.POST or None, request.FILES or None, instance=item)
+            form = ItemForm(request.POST or None,
+                            request.FILES or None, instance=item)
             form.save()
         else:
             item = ProfileView()

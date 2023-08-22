@@ -10,25 +10,6 @@ body {
     border: blue solid 4px;
 }
 
-.p-2 {
-    color: #fff;
-}
-
-.text-white {
-    color: #BBB6A5;
-}
-
-.text-white:hover {
-    color: #2A2F33;
-}
-
-.thin {
-    font-weight: 300;
-}
-
-.light-bg {
-    background-color: #2A2F33;
-}
 
 .dark-bg {
     background-color: #2A2F33;
@@ -60,57 +41,57 @@ body {
     color: #fff;
 }
 
-.link {
-    color: #2A2F33;
-    text-decoration: underline;
-}
-
-.link:hover,
-.link:active {
-    color: #8c8c9c;
-    text-decoration: none;
-}
-
 /* Navbar bottom boarder line*/
-
-nav {
-    border-bottom: #BBB6A5 solid 3px;
-}
 
 .navbar {
     border-bottom: #BBB6A5 solid 3px;
     width: 100%;
-
+}
+.navbar-nav {
+    background-color: #BBB6A5;
+    color: #fff;
 }
 
-li {
-    margin-right: 40px;
-    margin-top: 10px;
+.navbar-nav > li > a {
+    color: #2A2F33 !important;
+    font-weight: bolder;
+}
+
+.navbar-nav > li > a:hover {
+    background-color: #2A2F33 !important;
+    color: #fff !important;
+
 }
 
 .active,
-li:hover {
-    background-color: #BBB6A5;
-    transition: 0.7s;
-    color: #2A2F33;
+.navbar-nav > li > a::after {
+    border: #2A2F33 solid 2px;
+    color: #fff !important;
+
+}
+
+.nav-item {
+    border-bottom: solid #2A2F33 4px;
+    border-top: solid #2A2F33 3px;
 }
 
 .navbar-toggler {
     background-color: rgba(187, 182, 165, 1.000)
 }
 
-.border_tb{
+.border_tb {
     border: solid 10px #2A2F33;
 }
 
 
-@media (min-width: 770px) and (max-width:1250px) {
+@media(min-width: 770px) and(max-width:1250px) {
     span.logo_text {
         font-size: 0.8em;
     }
 
-    .brand_box {
+    .nav-brand {
         width: 40%;
+        border: red solid 2px;
     }
 
     span.logo_text {
@@ -120,11 +101,17 @@ li:hover {
     li {
         font-size: 0.8em;
     }
+
+    img {
+        max-width: 100%;
+        height: auto;
+
+    }
+
 }
 
-@media (max-width: 550px) {}
 
-@media (min-width: 450px) and (max-width:770px) {
+@media(min-width: 450px) and(max-width:770px) {
     span.logo_text {
         font-size: 0.8em;
     }
@@ -137,9 +124,16 @@ li:hover {
     .brand_box {
         width: 60%;
     }
+
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }
 
-@media (min-width: 200px) and (max-width:450px) {
+@media(min-width: 200px) and(max-width:450px) {
     span.logo_text {
         /* font-size: 0.7em; */
         display: none;
@@ -161,4 +155,10 @@ li:hover {
     .text_head {
         font-size: 1.5em;
     }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
 }

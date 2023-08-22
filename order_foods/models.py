@@ -46,7 +46,7 @@ class ProfileView(models.Model):
     def __str__(self):
         return self.user
 
-   
+
 class ContactView(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     first_name = models.CharField(max_length=100, blank=True)

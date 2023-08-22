@@ -8,15 +8,17 @@
 
 {% load static %}
 
-
-
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html lang="en" class="h-100">
 
 <head>
-    <title>Order Foods</title>
-    
+    <meta charset="UTF-8">
+    <title>{% block title %}Order Foods{% endblock %}</title>
+    <meta name="description" content="Introducing our new line of organic foods, carefully crafted to nourish your body and soul. With every bite, you'll feel the difference in your energy levels, digestion, and overall well-being. Say goodbye to processed junk and hello to a healthier, happier you with our delicious and nutritious offerings.">
+
+    <meta name="keywords" content=" order foods online, health foods, posh foods, luxury foods">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -27,55 +29,63 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" rel="preload" href="{% static 'css/style.css' %}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{static/favicon/apple-touch-icon-180x180.png}">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/apple-touch-icon-72x72.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/apple-touch-icon-57x57.png">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#f5f1e4">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-lg navbar-light dark-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark light-bg">
         <div class="container-fluid">
+            <div class="col navbar-brand">
             <a class="d-inline-block align-text-middle brand_box" style="text-decoration: none;"
-                href="{% url 'home' %}"><img class="img-fluid" style="width: 20%; height: auto;"
-                    srcset="https://res.cloudinary.com/dhl4uxgix/image/upload/v1692107976/Foods/Order_logo_hosqnr.png"
-                    src="https://res.cloudinary.com/dhl4uxgix/image/upload/v1692107976/Foods/Order_logo_hosqnr.png"
-                    alt="Order food location logo" alt="Order food location logo"><span
+                href="{% url 'home' %}"><img Cache-Control: max-age=31536000 class="img-fluid" width="90" height="90"
+                    src="https://res.cloudinary.com/dhl4uxgix/image/upload/c_scale,w_90/v1692643267/Foods/Order_logo_ebqmzf.png"
+                    alt="Order food location logo" aria-label="Order food location logo"><span
                     class=" h4 m-2 logo_text text-white">Order Foods &
-                    Delivery</span></a>
+                    Delivery</span></a></div>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <div><img class="img-fluid" src="https://res.cloudinary.com/dhl4uxgix/image/upload/v1692296156/bars-solid_zodrdr.png" width="35" height="35"></div>
+                <div><img Cache-Control: max-age=31536000 class="img-fluid" src="https://res.cloudinary.com/dhl4uxgix/image/upload/c_scale,w_60/v1692643458/Foods/bars-solid_hirhum.png"></div>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item text-center m-1 {% if request.path == home %}active{% endif %}">
-                        <a class="nav-link text-white" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link"aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item text-center m-1 {% if request.path == order_foods %}active{% endif %}">
-                        <a class="nav-link text-white" href="{% url 'order_foods' %}">Order Foods</a>
+                        <a class="nav-link" href="{% url 'order_foods' %}">Order Foods</a>
                     </li>
                     <li class="nav-item text-center m-1 {% if request.path == profile %}active{% endif %}">
-                        <a class="nav-link text-white" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
                     <li class="nav-item text-center m-1 {% if request.path == account_logout %}active{% endif %}">
-                        <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item text-center m-1 {% if request.path == order_foods %} active {% endif %}">
-                        <a class="nav-link text-white" aria-current="page" data-bs-toggle="modal"
+                        <a class="nav-link" aria-current="page" data-bs-toggle="modal"
                             data-bs-target="#submitModal_1" href="{% url 'order_foods' %}">Order
                             Foods</a>
                     </li>
                     {% endif %}
                     <li class="nav-item text-center m-1 {% if request.path == aboutus %}active{% endif %}">
-                        <a class="nav-link text-white" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'aboutus' %}">About Us</a>
                     </li>
 
                     <li class="nav-item text-center m-1 {% if request.path == contact %}active{% endif %}">
-                        <a class="nav-link text-white" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'contact' %}">Contact Us</a>
                     </li>
                 </ul>
             </div>
