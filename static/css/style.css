@@ -83,8 +83,7 @@ body {
     border: solid 10px #2A2F33;
 }
 
-
-@media(min-width: 770px) and(max-width:1250px) {
+@media(min-width: 770px) and (max-width:1250px) {
     span.logo_text {
         font-size: 0.8em;
     }
@@ -111,9 +110,11 @@ body {
 }
 
 
-@media(min-width: 450px) and(max-width:770px) {
+@media(min-width: 450px) and (max-width:770px) {
     span.logo_text {
-        font-size: 0.8em;
+        font-size: 1em;
+        border: pink solid 2px;
+        display: none;
     }
 
     .container {
@@ -123,6 +124,7 @@ body {
 
     .brand_box {
         width: 60%;
+        border: pink solid 2px;
     }
 
 
@@ -133,11 +135,13 @@ body {
 
 }
 
-@media(min-width: 200px) and(max-width:450px) {
+@media(min-width: 200px) and (max-width:450px) {
     span.logo_text {
-        /* font-size: 0.7em; */
+        font-size: 1em;
+        border: pink solid 2px;
         display: none;
     }
+
 
     .container {
         border-radius: 0;

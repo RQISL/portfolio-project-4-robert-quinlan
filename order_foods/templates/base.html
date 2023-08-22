@@ -70,7 +70,7 @@
                     {% else %}
                     <li class="nav-item text-center m-1 {% if request.path == order_foods %} active {% endif %}">
                         <a class="nav-link" aria-current="page" data-bs-toggle="modal"
-                            data-bs-target="#submitModal_1" href="{% url 'order_foods' %}">Order
+                            data-bs-target="#login-signup" href="{% url 'order_foods' %}">Order
                             Foods</a>
                     </li>
                     {% endif %}
@@ -85,7 +85,7 @@
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="login-signup" tabindex="-1" role="dialog" aria-labelledby="ModelLoginSignupLabel" aria-hidden="true">
+        <div class="modal fade" id="login-signup" tabindex="-1" role="dialog" aria-label="login-signupLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">

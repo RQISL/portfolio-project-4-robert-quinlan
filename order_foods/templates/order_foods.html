@@ -14,7 +14,11 @@
             <form method="POST">
                 {% csrf_token %}
                 <div class="dark-bg">
-                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#starter" aria-expanded="false" aria-controls="starter">Starter</button>
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#starter" aria-expanded="false"
+                        aria-controls="starter">
+                        Starter
+                    </button>
                     <div class="collapse border border-bottom-0 border-5" id="starter">
                         <div class="card card-body dark-bg text-white">
                             {% for starter in starters %}
@@ -28,7 +32,9 @@
                                         <div class="form-group form-check">
                                             <input type="checkbox" name="items[]" class="form-check-input"
                                                 value="{{ starter.pk }}">
-                                            <label class="form-check-label">{{ starter.name }}<span id="boot-icon" class="bi bi-currency-euro" style="font-size: 1rem; color: bisque;"></span>{{ starter.price }}</label>
+                                            <label class="form-check-label">{{ starter.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ starter.price }}</label>
                                         </div>
                                     </div>
                                     <hr>
@@ -42,7 +48,11 @@
                 </div>
             <br>
                 <div class="dark-bg">
-                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#soup" aria-expanded="false" aria-controls="collapseExample">Soup</button>
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#soup" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Soup
+                    </button>
                     <div class="collapse border border-bottom-0 border-5" id="soup">
                         <div class="card card-body dark-bg text-white">
                             {% for soup in soups %}
@@ -56,7 +66,9 @@
                                         <div class="form-group form-check">
                                             <input type="checkbox" name="items[]" class="form-check-input"
                                                 value="{{ soup.pk }}">
-                                            <label class="form-check-label">{{ soup.name }}<span id="boot-icon" class="bi bi-currency-euro" style="font-size: 1rem; color: bisque;"></span>{{ soup.price }}</label>
+                                            <label class="form-check-label">{{ soup.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ soup.price }}</label>
                                         </div>
                                     </div>
                                     <hr>
@@ -71,21 +83,27 @@
 
                 <br>
                 <div class="dark-bg">
-                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#main" aria-expanded="false" aria-controls="collapseExample">Main</button>
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#main" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Main
+                    </button>
                     <div class="collapse border border-bottom-0 border-5" id="main">
                         <div class="card card-body dark-bg text-white">
                             {% for main in mains %}
 
                             <div class="row">
                                 <div class="col-xl-3 text-center">
-                                    <img class="rounded img-fluid" src="{{ main.image.url }}" alt="Select list for main meals"/>
+                                    <img class="rounded img-fluid" src="{{ main.image.url }}"/>
                                 </div>
                                 <div class="col-xl-9 ">
                                     <div class="d-flex flex-row">
                                         <div class="form-group form-check">
                                             <input type="checkbox" name="items[]" class="form-check-input"
                                                 value="{{ main.pk }}">
-                                            <label class="form-check-label">{{ main.name }}<span id="boot-icon" class="bi bi-currency-euro" style="font-size: 1rem; color: bisque;"></span>{{ main.price }}</label>
+                                            <label class="form-check-label">{{ main.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ main.price }}</label>
                                         </div>
                                     </div>
                                     <hr>
@@ -101,21 +119,27 @@
 
                 <br>
                 <div class="dark-bg">
-                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#dessert" aria-expanded="false" aria-controls="collapseExample">Dessert</button>
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#dessert" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Dessert
+                    </button>
                     <div class="collapse border border-bottom-0 border-5" id="dessert">
                         <div class="card card-body dark-bg text-white">
                             {% for dessert in desserts %}
 
                             <div class="row">
                                 <div class="col-xl-3 text-center">
-                                    <img class="rounded img-fluid" src="{{ dessert.image.url }}" alt="Select list for desserts"/>
+                                    <img class="rounded img-fluid" src="{{ dessert.image.url }}"/>
                                 </div>
                                 <div class="col-xl-9 ">
                                     <div class="d-flex flex-row">
                                         <div class="form-group form-check">
                                             <input type="checkbox" name="items[]" class="form-check-input"
                                                 value="{{ dessert.pk }}">
-                                            <label class="form-check-label">{{ dessert.name }}<span id="boot-icon" class="bi bi-currency-euro" style="font-size: 1rem; color: bisque;"></span>{{ dessert.price }}</label>
+                                            <label class="form-check-label">{{ dessert.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ dessert.price }}</label>
                                         </div>
                                     </div>
                                     <hr>
@@ -130,21 +154,27 @@
 
                 <br>
                 <div class="dark-bg">
-                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#drink" aria-expanded="false" aria-controls="collapseExample">Drink</button>
+                    <button class="btn btn-dark text-white container-fluid text-uppercase" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#drink" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Drink
+                    </button>
                     <div class="collapse border border-bottom-0 border-5" id="drink">
                         <div class="card card-body dark-bg text-white">
                             {% for drink in drinks %}
 
                             <div class="row">
                                 <div class="col-xl-3 text-center">
-                                    <img class="rounded img-fluid" src="{{ drink.image.url }}" alt="Select list for drinks"/>
+                                    <img class="rounded img-fluid" src="{{ drink.image.url }}"/>
                                 </div>
                                 <div class="col-xl-9 ">
                                     <div class="d-flex flex-row">
                                         <div class="form-group form-check">
                                             <input type="checkbox" name="items[]" class="form-check-input"
                                                 value="{{ drink.pk }}">
-                                            <label class="form-check-label">{{ drink.name }}<span id="boot-icon" class="bi bi-currency-euro" style="font-size: 1rem; color: bisque;"></span>{{ drink.price }}</label>
+                                            <label class="form-check-label">{{ drink.name }}<span id="boot-icon"
+                                                class="bi bi-currency-euro"
+                                                style="font-size: 1rem; color: bisque;"></span>{{ drink.price }}</label>
                                         </div>
                                     </div>
                                     <hr>
@@ -160,39 +190,39 @@
             <div class="w-100 mt-5 d-flex justify-content-center border border-secondary">
             <div class="row w-75">
                 <div class="form-group pt-3">
-                    <label for="full name">Full Name</label>
-                    <input required class="form-control" type="text" placeholder="Your Name" name="full name">
+                    <label for="name">Full Name</label>
+                    <input required class="form-control" type="text" placeholder="Your Name" name="name" />
                 </div>
 
                 <div class="form-group pt-3">
-                    <label for="email">Email Address</label>
-                    <input required class="form-control" type="text" placeholder="example@company.com" name="email">
+                    <label for="name">Email Address</label>
+                    <input required class="form-control" type="text" placeholder="example@company.com" name="email" />
                 </div>
 
                 <div class="form-group pt-3">
-                    <label for="street">Street Address</label>
-                    <input required class="form-control" type="text" placeholder="1234 Main St" name="street">
+                    <label for="name">Street Address</label>
+                    <input required class="form-control" type="text" placeholder="1234 Main St" name="street" />
                 </div>
 
                 <div class="row mb-5">
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group pt-3">
-                            <label for="city">City</label>
-                            <input required class="form-control" type="text" placeholder="Douglas" name="city">
+                            <label for="name">City</label>
+                            <input required class="form-control" type="text" placeholder="Douglas" name="city" />
                         </div>
                     </div>
 
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group pt-3">
-                            <label for="county">County</label>
-                            <input required class="form-control" type="text" placeholder="Cork" name="county">
+                            <label for="name">County</label>
+                            <input required class="form-control" type="text" placeholder="Cork" name="county" />
                         </div>
                     </div>
 
                     <div class=" col-md-4 col-sm-12">
                         <div class="form-group pt-3">
-                            <label for="eirecode">Eirecode</label>
-                            <input required class="form-control" type="text" placeholder="T12 DG34" name="eirecode">
+                            <label for="name">Eirecode</label>
+                            <input required class="form-control" type="text" placeholder="T12 DG34" name="eirecode" />
                         </div>
                     </div>
                 </div>
