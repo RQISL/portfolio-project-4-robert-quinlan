@@ -9,9 +9,7 @@
         <div class="col-md-12 p-5">
             <div>
                 <h2 class="d-flex justify-content-between">Profile
-                <a href="{% url 'profile_add' %}" style="text-decoration: none;">
-                    <button class="btn btn-dark">Add</button>
-                </a>
+                <a href="{% url 'profile_add' %}" class="btn btn-dark" style="text-decoration: none;">Add</a>
             </h2>
             </div>   
                 <hr>
@@ -32,12 +30,10 @@
                     </div>
                     {% else %}
                     <div class="btn">
-                        <a href="/update/{{ item.id }}">
+                    <form class="login" method="POST" action="{% url '/update/{{ item.id }}' %}"></form>
                             <button class="btn btn-dark">Edit</button>
-                        </a>
-                        <a href="/delete/{{ item.id }}">
-                            <button class="btn btn-dark">Delete</button>
-                        </a>
+                    </form>
+                        <a href="/delete/{{ item.id }}" class="btn btn-dark">Delete</a>
                     </div>
                    
                     {% endif %}

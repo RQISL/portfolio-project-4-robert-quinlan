@@ -181,6 +181,7 @@ class Profile_Create(View):
         }
         return render(request, 'profile_add.html', context)
 
+
     def post(self, request, *args, **kwargs):
         form = ItemForm(request.POST, request.FILES)
         if request.method == 'POST':
@@ -190,7 +191,8 @@ class Profile_Create(View):
                 bio = request.POST.get('bio')
                 image = request.POST.get('image')
                 form.save()
-                return redirect('profile')
+
+            return redirect('profile')
 
 
 class Profile_Delete(View):
