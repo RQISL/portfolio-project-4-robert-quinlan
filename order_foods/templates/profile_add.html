@@ -9,11 +9,13 @@
 
 <div class="container my-5">
     <div class="text-center mb-4">
-        <a style="text-decoration: none;" class="d-flex justify-content-start btn btn-dark ms-5 mt-5" href="{% url 'profile' %}">Go to Profile</a>
         <h1>Create Profile</h1>
+        <div class="row justify-content-start w-25">
+            <a style="text-decoration: none;" class="btn btn-dark ms-5" href="{% url 'profile' %}">Go to Profile</a>
+        </div>
     </div>
 
-<form method="POST" action="{{ Profile_View }}" enctype="multipart/form-data">
+<form method="POST" action="#" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div class="form-group p-5">
