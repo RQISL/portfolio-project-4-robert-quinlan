@@ -1,3 +1,5 @@
+{% load static %}
+
 <!-- for Link Active in navbar -->
 {% url 'home' as home %}
 {% url 'order_foods' as order_foods %}
@@ -6,13 +8,10 @@
 {% url 'profile' as profile %}
 {% url 'account_logout' as account_logout %}
 
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 
 <head>
-    <meta charset="UTF-8">
     <title>{% block title %}Order Foods{% endblock %}</title>
     <meta name="description" content="Introducing our new line of organic foods, carefully crafted to nourish your body and soul. With every bite, you'll feel the difference in your energy levels, digestion, and overall well-being. Say goodbye to processed junk and hello to a healthier, happier you with our delicious and nutritious offerings.">
 
@@ -32,6 +31,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
+    <meta charset="UTF-8">
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
