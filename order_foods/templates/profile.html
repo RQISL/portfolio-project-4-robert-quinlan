@@ -18,7 +18,7 @@
                     {% if item.user %}
                     <div class="row">
                         <div class="col-xl-3 text-center">
-                        <img class="rounded-circle img-fluid border_tb" src="{{ item.image.url }}" width="300" height="300" style="width: 300px; height: 300px; object-fit: cover; border: #2A2F33 15px solid;"/>
+                        <img class="rounded-circle img-fluid border_tb" src="{{ item.image.url }}" alt="Cute cat face" width="300" height="300" style="width: 300px; height: 300px; object-fit: cover; border: #2A2F33 15px solid;">
                 </div>
                 <div class="col-xl-9 ">
                     <div class="d-flex flex-row">
@@ -30,10 +30,8 @@
                     </div>
                     {% else %}
                     <div class="btn">
-                    <form class="login" method="POST" action="{% url '/update/{{ item.id }}' %}"></form>
-                            <button class="btn btn-dark">Edit</button>
-                    </form>
-                        <a href="/delete/{{ item.id }}" class="btn btn-dark">Delete</a>
+                        <a href="/update/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;" >Edit</a>
+                        <a href="/delete/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Delete</a>
                     </div>
                    
                     {% endif %}
