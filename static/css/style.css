@@ -79,17 +79,18 @@ body {
     background-color: rgba(187, 182, 165, 1.000)
 }
 
-.border_tb {
+/* .border_tb {
     border: solid 10px #2A2F33;
-}
+} */
 
 @media(min-width: 770px) and (max-width:1250px) {
     span.logo_text {
         font-size: 0.8em;
     }
 
-    .nav-brand {
-        width: 40%;
+    .brand_box {
+        max-width: 100%;
+        border: red solid 2px;
     }
 
     span.logo_text {
@@ -103,7 +104,6 @@ body {
     img {
         max-width: 100%;
         height: auto;
-
     }
 
 }
@@ -113,9 +113,8 @@ body {
     span.logo_text {
         font-size: 1em;
         border: pink solid 2px;
-        display: none;
     }
-
+ 
     .container {
         border-radius: 0;
         padding: 30px;
@@ -141,14 +140,13 @@ body {
         display: none;
     }
 
-
     .container {
         border-radius: 0;
         padding: 30px;
     }
 
     .brand_box {
-        width: 70%;
+        max-width: 100%;
     }
 
     .text {
