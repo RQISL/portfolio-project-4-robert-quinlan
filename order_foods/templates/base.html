@@ -12,6 +12,7 @@
 <html lang="en" class="h-100">
 
 <head>
+    <meta charset="UTF-8">
     <title>{% block title %}Order Foods{% endblock %}</title>
     <meta name="description" content="Introducing our new line of organic foods, carefully crafted to nourish your body and soul. With every bite, you'll feel the difference in your energy levels, digestion, and overall well-being. Say goodbye to processed junk and hello to a healthier, happier you with our delicious and nutritious offerings.">
 
@@ -31,7 +32,6 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <link rel="icon" type="image/x-icon" href="/static/favicon/favicon.ico">
-    <meta charset="UTF-8">
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -40,8 +40,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark light-bg">
         <div class="container-fluid">
-            <div class="col navbar-brand">
-            <a class="d-inline-block align-text-middle brand_box" style="text-decoration: none;"
+            <div class="col navbar-brand d-inline-block align-text-middle brand_box">
+            <a style="text-decoration: none;"
                 href="{% url 'home' %}"><img class="img-fluid" width="250" height="250" style="width: 25%; height: auto;"
                     src="https://res.cloudinary.com/dhl4uxgix/image/upload/v1692797286/Foods/Order_logo_rn4jk7.png"
                     alt="Order food location logo" aria-label="Order food location logo"><span
