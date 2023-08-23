@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Profile Add{% endblock %}
-{% block head %}
-{{ 'super()' }}
-{% endblock %}
+
 {% load static %}
 {% load widget_tweaks %}
 {% block content %}
@@ -15,25 +13,26 @@
         </div>
     </div>
 
-<form method="POST" action="#" enctype="multipart/form-data">
-    {% csrf_token %}
+    <form method="POST" action="#" enctype="multipart/form-data">
+        {% csrf_token %}
 
-    <div class="form-group p-5">
-            <div>Username:
-                {% render_field form.user placeholder="your suggest Username..." class+="form-control" %}
+        <div class="form-group p-5">
+                <div>Username:
+                    {% render_field form.user placeholder="your suggest Username..." class+="form-control" %}
+                </div>
+                <br>
+                <div>Biograpy:
+                    {% render_field form.bio placeholder="write about yourself..." class+="form-control" %}
+                </div>
+                <br>
+                <div>Upload your image:
+                    <div>{% render_field form.image class+="form-control" %}</div>
+                </div>
+                <br>
+            <div class="form-group w-100 text-center">
+                <button class="btn btn-dark container-fluid w-75" type="submit">Save</button>
             </div>
-            <br>
-            <div>Biograpy:
-                {% render_field form.bio placeholder="write about yourself..." class+="form-control" %}
-            </div>
-            <br>
-            <div>Upload your image:
-                <div>{% render_field form.image class+="form-control" %}</div>
-            </div>
-            <br>
-    <div class="form-group w-100 text-center">
-        <button class="btn btn-dark container-fluid w-75" type="submit">Save</button>
-    </div>
-</form>
+        </div>
+    </form>
 </div>
 {% endblock content %}

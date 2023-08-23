@@ -11,35 +11,36 @@
         <h1>Contact Us</h1>
     </div>
 
-<form method="POST" action="{{ Profile_View }}" enctype="multipart/form-data">
-    {% csrf_token %}
+    <form method="POST" action="#" enctype="multipart/form-data">
+        {% csrf_token %}
 
-    <div class="form-group p-3">
-        <div class="row">
-            <div class="col-xl-6">
-            <div>First Name:
-                {% render_field form.first_name placeholder="First Name..." class+="form-control" %}
+        <div class="form-group p-3">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div>First Name:
+                        {% render_field form.first_name placeholder="First Name..." class+="form-control" %}
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div>Last Name:
+                        {% render_field form.last_name placeholder="Last Name..." class+="form-control" %}
+                    </div>
+                </div>
+
+                    <br>
+                    <div>Email Address:
+                        <div>{% render_field form.email placeholder="Email Address" class+="form-control" %}</div>
+                    </div>
+                    <br>
+                    <div>Message:
+                        <div>{% render_field form.message placeholder="write your message...." class+="form-control" %}</div>
+                    </div>
+                    <br>
+                <div class="form-group w-100 text-center">
+                    <button class="btn btn-dark container-fluid mt-5 w-75" type="submit">Send Message</button>
+                </div>
             </div>
         </div>
-        <div class="col-xl-6">
-            <div>Last Name:
-                {% render_field form.last_name placeholder="Last Name..." class+="form-control" %}
-            </div>
-            </div>
-
-    </div>
-            <br>
-            <div>Email Address:
-                <div>{% render_field form.email placeholder="Email Address" class+="form-control" %}</div>
-            </div>
-            <br>
-            <div>Message:
-                <div>{% render_field form.message placeholder="write your message...." class+="form-control" %}</div>
-            </div>
-            <br>
-    <div class="form-group w-100 text-center">
-            <button class="btn btn-dark container-fluid w-75" type="submit">Send Message</button>
-    </div>
-</form>
+    </form>
 </div>
 {% endblock content %}

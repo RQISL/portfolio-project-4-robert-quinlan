@@ -1,40 +1,38 @@
 {% extends "base.html" %}
-{% block title %}Profile Update{% endblock %}
+{% block title %}Profile Add{% endblock %}
 
 {% load static %}
 {% load widget_tweaks %}
-
 {% block content %}
 
 <div class="container my-5">
     <div class="text-center mb-4">
-        <a style="text-decoration: none;" class="d-flex justify-content-start btn btn-dark ms-5 mt-5" href="{% url 'profile' %}">Go Back to Profile</a>
         <h1>Profile Update</h1>
+        <div class="row justify-content-start w-25">
+            <a style="text-decoration: none;" class="btn btn-dark ms-5" href="{% url 'profile' %}">Go to Profile</a>
+        </div>
     </div>
 
-<form method="POST" action="#" enctype="multipart/form-data">
-    {% csrf_token %}
+    <form method="POST" action="#" enctype="multipart/form-data">
+        {% csrf_token %}
 
-    <div class="form-group p-5">
-            <div>Username:
-                {% render_field form.user placeholder="your suggest Username..." class+="form-control" %}
+        <div class="form-group p-5">
+                <div>Username:
+                    {% render_field form.user placeholder="your suggest Username..." class+="form-control" %}
+                </div>
+                <br>
+                <div>Biograpy:
+                    {% render_field form.bio placeholder="write about yourself..." class+="form-control" %}
+                </div>
+                <br>
+                <div>Upload your image:
+                    <div>{% render_field form.image class+="form-control" %}</div>
+                </div>
+                <br>
+            <div class="form-group w-100 text-center">
+                <button class="btn btn-dark container-fluid w-75" type="submit">Save</button>
             </div>
-            <br>
-            <div>Biograpy:
-                {% render_field form.bio placeholder="write about yourself..." class+="form-control" %}
-            </div>
-            <br>
-            <div>Upload your image:
-                <div>{% render_field form.image class+="form-control" %}</div>
-            </div>
-            <br>
-    <div class="form-group w-100 text-center">
-            <button class="btn btn-dark container-fluid w-75" type="submit">Save</button>
-    </div>
-</form>
+        </div>
+    </form>
 </div>
 {% endblock content %}
-
-
-
-
