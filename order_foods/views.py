@@ -107,7 +107,6 @@ class Order(View):
         for item in order_items['items']:
             price += item['price']
             item_ids.append(item['id'])
-        
         order = OrderModel.objects.create(
             price=price,
             name=name,
@@ -180,7 +179,6 @@ class Profile_Create(View):
             'form': form
         }
         return render(request, 'profile_add.html', context)
-
 
     def post(self, request, *args, **kwargs):
         form = ItemForm(request.POST, request.FILES)

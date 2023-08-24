@@ -14,12 +14,12 @@
             {% for item in items.all %}
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <p>{{ item.name }} <span> &#8364 {{ item.price }}</span></p>
+                    <p>{{ item.name }} <span> &#8364; {{ item.price }}</span></p>
                 </div>
             </div>
             {% endfor %}
             <hr>
-            <p class="pt-3" style="font-weight: bolder; font-size: 1.4rem;">Total:<span> &#8364 {{ price }}</span></p>
+            <p class="pt-3" style="font-weight: bolder; font-size: 1.4rem;">Total:<span> &#8364; {{ price }}</span></p>
             <a style="text-decoration: none;" class="btn btn-dark w-75" href="{% url 'home' %}">Go back to home</a>
         </div>
     </div>
