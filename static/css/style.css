@@ -2,17 +2,16 @@ body {
     background-color: #2A2F33;
 }
 
-.box5 {
-    border: red solid 4px;
-}
-
-.box4 {
-    border: blue solid 4px;
-}
-
-
 .dark-bg {
     background-color: #2A2F33;
+}
+
+span.logo_text {
+    font-size: 1.5em;
+}
+
+.brand_box {
+    max-width: 70%;
 }
 
 .main-bg {
@@ -79,13 +78,32 @@ body {
     background-color: rgba(187, 182, 165, 1.000)
 }
 
-/* .border_tb {
-    border: solid 10px #2A2F33;
-} */
-
-@media(min-width: 770px) and (max-width:1250px) {
+/* Responsive between 1080 and 1190 for Navbar with logo and text, other images */
+@media(min-width: 1080px) and (max-width:1190px) {
     span.logo_text {
+        font-size: 1.4em;
+    }
+
+    .brand_box {
+        max-width: 80%;
+    }
+
+
+    li {
         font-size: 0.8em;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+}
+
+/* Responsive between 990 and 1080 for Navbar with logo and text, other images */
+@media(min-width: 990px) and (max-width:1080px) {
+    span.logo_text {
+        font-size: 1em;
     }
 
     .brand_box {
@@ -104,10 +122,10 @@ body {
 
 }
 
-
-@media(min-width: 450px) and (max-width:770px) {
+/* Responsive between 624 and 990 for Navbar with logo and text, other images */
+@media(min-width: 624px) and (max-width:990px) {
     span.logo_text {
-        font-size: 1em;
+        font-size: 1.6em;
     }
  
     .container {
@@ -116,7 +134,7 @@ body {
     }
 
     .brand_box {
-        width: 60%;
+        width: 50%;
     }
 
 
@@ -127,7 +145,9 @@ body {
 
 }
 
-@media(min-width: 200px) and (max-width:450px) {
+/* Responsive between 200 and 624 for Navbar with logo and hide the text, other images, 
+and paragraph text size */
+@media(min-width: 200px) and (max-width:624px) {
     span.logo_text {
         display: none;
     }
@@ -144,6 +164,9 @@ body {
     img {
         max-width: 100%;
         height: auto;
+    }
+    p{
+        font-size: 1.1em;
     }
 
 }
