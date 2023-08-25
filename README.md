@@ -1,226 +1,223 @@
 
--------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+### Please note: I am first language is ISL (Irish Sign Language). Despite writing in English as a second language. 
 
-### Please note: I am first language is ISL (Irish Sign Language). I write in the second English language. I hope you read and understand the ReadMe
+* Introducing the [Ahrefs Writing Tools Product Description Generator]( https://ahrefs.com/writing-tools/product-description-generator), a powerful tool designed to assist non-native English speakers in crafting professional and polished product descriptions. While subscriptions to this tool can be costly, it has proven to be an invaluable resource for those seeking to improve their English writing skills. With the ability to write and translate English clearly and concisely, users can confidently create product descriptions that are both informative and engaging. Whether you are a business owner or a content creator, the Ahrefs Writing Tools Product Description Generator is a must-have tool for anyone looking to enhance their English writing abilities.
 
--------------------------------------------------------------------------------------------------------
+* Above I used that one for a site development project for Order Foods & Delivery.
+
+* Unfortunately, It is not perfect to write because it did not meet of my demonstration for Readme. I had to write in my second English language and copy and paste in the AI generator then make editing instead. 
+
+* I hope you read and understand the ReadMe.
+------------------------------------------------------------------------------------
+## Agile management
+
+* The concept introduced for the Order Foods & Delivery project, is a comprehensive solution for food ordering and delivery. Developed through a 16-stage process utilizing Agile management, this project was completed. 
+
+* The Agile management can find the link at [Robert’s github]( https://github.com/RQISL/portfolio-project-4-robert-quinlan/issues?q=is%3Aissue+is%3Aclosed) and [github milestone](https://github.com/RQISL/portfolio-project-4-robert-quinlan/milestones) and milestone showcases the screenshots of progress made from start to finish below:
+
+* Agile Management:
+<details>
+<summary>Click here to see three milestones from start, middle and finish:</summary>
+<img src="media/images_readme/Agile/Untitled-1.png" alt="Three milestones from start, middle & finish">
+</details>
+
+* Please note on the first image white after that I changed mode to dark screen as my perferred.
 
 ## Concept Project
 
-* The concept project for the Tic Tac Toe. The design function is very basic in Python.
+* Our innovative Order Foods & Delivery project, features modern health foods for niche customers.
 
-* The project's development follows below:
+- The project's development follows below:
 
-## Flowchart
+## Flowchart 
+* Design of the navbar links flowchart:
+<details>
+<summary>Click here to see the flowchart</summary>
+<img src="media/images_readme/Mindmap/Order Foods Site.png" alt=" design the flowchart for Order Foods’s navbar">
+</details>
 
-* Design for the functions:
+-------------------------------------------------------------------------------------------------
+# Create design UX for the Order Foods site
+
+ # Quick Sketch UX
+ * ## Desktop & Mobile
+
+![Quick Sketch](assets/Image-for-ReadMe/SketchDesktopandMobile.png)
+
+# Wireframe 
+* # Design wireframe UX for Desktop & Mobile
+* A design UX that is almost similar to the one developed for the site. Please note that while the design UX may not be exact, it is still of the highest quality and has been developed with utmost care and attention to detail. 
+
+* ## Desktop
+
+![Wireframe Desktop](media/images_readme/Wireframe/Desktop_full.png)
+![Wireframe Desktop](media/images_readme/Wireframe/Desktop_full_1.png)
+
+* ## Mobile
+
+![Wireframe Mobile](media/images_readme/Wireframe/Mobile_full.png)
+
+## Colour Pallet
+
+* A food table style that offers a luxurious and modern colour pallet of your choice. The display of healthy foods is sure to catch your eye. Inspired by the beautiful UX of [Adachi Restaurant](https://adachirestaurant.com/), I have developed an idea UX.
+
+* The ccolour palette is Shark, Nomad, Mantle and Manatee, available in a range of stunning colours. Choose from our carefully curated colour palette, found at at [Canva](https://www.google.com/search?sca_esv=560184847&q=shark+nomad+mantle+and+manatee+color+palette+with+images&tbm=isch#imgrc=qecGZ40hJUIG4M) to create moodboard.
+See attached for colour options by found the colour pallet. I followed the image of colour palette and sign-in to canva, where I was created of the moodboard. See attached below:
 
 <details>
-<summary>See Flowchart click here</summary>
-<img src="assets/images/Flowchart_Tic_Tac_Toe_part_1.jpg" alt=" design the flowchart for Tic Tac Toe">
-<br>
-<img src="assets/images/Flowchart_Tic_Tac_Toe_part_2.jpg" alt=" design the flowchart for Tic Tac Toe">
+<summary>Click here to see colour palette</summary>
+<img src="media/images_readme/Mindmap/Screen Shot 2023-07-22 at 14.38.42.png" alt=" colour palette with design meal on the table to match select color">
+</details>
+
+<details>
+<summary>Click here to see moodboard</summary>
+<img src="media/images_readme/Mindmap/Order_and_Foods.png" alt="create layout with colour and craft design moodboard">
 </details>
 
 -------------------------------------------------------------------------------------------------------
+# Design and development the Order Foods & Delivery for desktop & mobile devices
 
-# Design and development the Tic Tac Toe in Python
+## Logo: Food Location image and aside of title “Order Food & Delivery
 
-## Logo: Tic Tac Toe
-
-- The logo head Tic Tac Toe, the font color is red and the background is white.
-* When the user enters the name then The display shows up "Hello 'username' and 'Welcome to play Tic Tac Toe'.
-* The rule is displayed to instruct how to play the game.
-
-![CI logo](assets/images/Logo_welcome_rule.png)
+![CI logo](media/images_readme/Site_pages/Logo_page.png)
 
 Features
 -------------
+* Introducing a luxury food ordering and delivery service, catering to niche customers. Indulge in high-quality cuisine from the comfort of your own home.
 
-* The Tic Tac Toe have two players play turning between the computer and the human. The computer's player is 'o' and the human's player is 'x'.
+### Mock-up Responsive Screens as seen attached here:
 
-![CI logo](assets/images/Project_3_mockup_responsive_screen.png)
+![](media/images_readme/Mindmap/Responsive_mockup.png)
 
 Existing Features
 -----------------------
+### Navigation Bar
 
-### Start game
+* Introducing our user-friendly header menu, consisting of five pages: Logo, Home, About, Order Foods, and Contact and include profile, order food menu and logout. Easily navigate through our website by following the flowchart provided. See attached for more details [Flowchart](#flowchart).
 
-* <strong>The T.T.T begin game.</strong>
-  * Please see the function as flowchart as seen above [Flowchart](#flowchart). I am putting the sections of the image to describe lists of how the player is beginning...
+### Logo and Navbar
+* Clickable logo directs users to the Home page, activating upon click for seamless navigation. Streamline your browsing experience. See screenshot.
 
-<details>
-<summary><strong style="font-size:18px">See images sections click here</strong></summary>
+![CI logo](media/images_readme/Site_pages/Nabar.png)
+The picture below:
+* ## Home page
+* Professional product description: 
 
-## Ask the user to enter the name
+* Our product features a visually appealing front image layout and a demonstration-style text display for food pages. See screenshot.
 
-<br>
-  <img src="assets/images/Ask_user_name.png" alt="Screenshot show to ask the user enter the name before starting Tic Tac Toe game">
-<br>
+![](media/images_readme/Site_pages/Home_page.png)
 
-## Start game
+* ## Order Foods page > login or sign-up
+* The user-friendly food ordering system. With just a click to “order food”, users can easily order their favourite foods. New users are prompted to login or sign up before being redirected to the menu selection page. Check out the attached screenshots for a preview.
 
-<br>
-  <img src="assets/images/Start_game.png" alt="Screenshot show begins the Tic Tac Toe game">
-<br>
+![](media/images_readme/Site_pages/Either_login_signup_button.png)
 
-## Ask the user to press the number between 1 and 9
+* ## Order Foods > Login page
+![](media/images_readme/Site_pages/Login_page_desktop.png)
 
-<br>
+* ## Order Foods > sign-up page
+![](media/images_readme/Site_pages/Signup_page_desktop.png)
 
-  <img src="assets/images/Press_number.png" alt="Screenshot show to ask the user entry pick the numbers">
-<br>
+* ## Order Foods > order menu page
+* The user-friendly food ordering system. Simply click to order, clikable Collapse, select the menu, fill in your address details, Once satisfied, click "order place" and receive a redirect to confirm the list price and total. Check out our attached screenshots for a preview. 
 
-## The human player's winner by 'x'
+### Order Menu
+![](media/images_readme/Site_pages/Menu_page_desktop.png)
 
-<br>
+### Order Menu > likable Collapse
 
-  <img src="assets/images/Ask_play_again.png" alt="Screenshot show who is winner by 'x'">
-<br>
+![](media/images_readme/Site_pages/Select_menu_list_foods_page.png)
 
-## The computer player's winner by 'o'
+### Order Menu > order confirmed
+![](media/images_readme/Site_pages/Order_confirm_page.png)
 
-<br>
+## Profile page
+* A profile page with CRUD functionality. Users can easily create, read, update, and delete their profiles with the click of a button. With the ability to edit and delete images and biographies, users have complete control over their profiles. If a user decides to delete their profile, an empty page will be displayed with an option to create a new profile using the "Add" button. 
 
-  <img src="assets/images/Computer_winner.png" alt="Screenshot show who is winner by 'o'">
-<br>
+Please note that this is a basic implementation of CRUD functionality. Check out the attached screenshots for a preview.
 
-## The tie
+### Profile page
+![](media/images_readme/Site_pages/Profile_page.png)
 
-<br>
+### Profile page > Profile editing page
+![](media/images_readme/Site_pages/Profile_edit_page.png)
 
-  <img src="assets/images/Problem_tie.png" alt="Screenshot show the tie!">
-<br>
+### Profile page > Profile create page
+![](media/images_readme/Site_pages/Create_profile_page.png)
 
-## Ask the user to play again either typing 'yes' or 'no'
 
-<br>
+* ## Logout page
+* The user-friendly website with a convenient logout feature is located on the nav bar. Upon clicking, a prompt will appear to confirm the user's intention to sign out. Once confirmed, the user will be redirected to the Home page and the nav bar will disappear from the profile and logout. Additionally, our website includes a helpful reminder to order food, prompting users to login or sign up again. 
 
-  <img src="assets/images/Ask_play_again.png" alt="Screenshot show to ask the user entry yes or no">
-<br>
+Please refer to the attached screenshots for a visual representation.
+![](media/images_readme/Site_pages/Logut_page.png)
 
-## The human player types "yes" then the computer's player will start at the first and then turn the human player to continue
+* ## About Us page
+* The order food and delivery service through our informative "About Us" page. See screenshot.
 
-<br>
+![](media/images_readme/Site_pages/About_page.png)
 
-  <img src="assets/images/Turn_Computer_player.png" alt="Screenshot show to ask user type 'yes' or 'no'">
-<br>
+* ## Contact page
+* Professional contact form with redirect to thank you page. Guaranteed response within 3 business days.
 
-## Error handlers
+![](media/images_readme/Site_pages/contact_page.png)
 
-* Over 9 numbers show up as an error
+## Contact page > Responsive "Thank you message"
+![](media/images_readme/Site_pages/Response_Thankyou_page.png)
 
-  <img src="assets/images/Error_over_9.png" alt="Screenshot show, the error handle to ask user to use number between 1 and 9">
 
-* letter error, to ask the user to enter the number between 1 and 9
+## Footer 
+* "Order Foods & Delivery" title display with a copyright symbol. Simple design and development. Screenshot attached.
 
-  <img src="assets/images/Error_letter.png" alt="Screenshot show, the error handle to ask user to use number between 1 and 9">
+![](media/images_readme/Site_pages/Footer_page.png)
 
-* Error shows up the player takes either 'x' or 'o'
+### Testing
+* Our comprehensive testing service ensures browser compatibility across a range of popular browsers including Safari, Google Chrome, Opera, Microsoft Edge, and Firefox. 
 
-  <img src="assets/images/Player_taken.png" alt="Screenshot show, the error handler to ask the user that the player have taken">
+I conduct thorough tests on desktop 24”, MacBook Pro laptop 21”, and iPhone 6” to ensure responsive design on screens of varying aspect ratios. While I have identified some issues with Safari's navbar responsiveness.
 
-* Error shows up, ask the user to type 'yes' or 'no'
+I have decided not to pursue further fixes due to time constraints. However, I plan to conduct more thorough testing on Safari in the future, as I have found its developer tools to be superior to those of Chrome, which we typically use.
 
-  <img src="assets/images/Error_yes_or_no.png" alt="Screenshot show, the error handler to ask a user to type 'yes' or 'no'">
+See compare screen on Safari and Google Chrome responsive Screenshot attached
 
-## Ask the user, the human player type 'no' and the display show up to say "Goodbye! Come back to play again :)"
 
-<br>
+### The lighthouse runs testing and results.
 
-  <img src="assets/images/End_game.png" alt="Screenshot show, the user type 'no' to say 'Goodbye!, Come back to play again'">
-<br>
+* Introducing our innovative product that enhances website performance with ease. The solution includes the addition of Alt tags, the removal of unnecessary HTML tags, and the incorporation of Meta keywords for SEO optimization. 
 
-</details>
-
-## Testing
-
-### The browser compatibility
-
-* The testing runs for Chrome, Opera, Microsoft Edge, Safari and Firefox for the Heroku app. I found Chrome, Opera and Microsoft Edge, it does not great visual while you are playing a game. I would not recommend using those.
-
-* I am finding Safari and Firefox, it does very clear visuals while playing. I would recommend using Safari or Firefox.
-
-### The devices
-
-* I was testing on my iPhone and seem it does not work at all but my mentor Rory does work on his mobile device.
-
-### The test running game in Heroku app
-
-* Almost the function works except the check_draw does not work because I want to see the prompt "it's tie on the screen when it was tie.
-
-* It was working before when I asked the tutor because I found it have some glitches and I want to solve check_draw. we tried to figure out what was the problem. Unfortunately, my time allowance was hit up. I ran to fix it several times and could not find a solution. My deadline was so closed then I stop to fix it and move on to do ReadMe.
+It has been proven to improve website results, even in cases where responsive images have caused performance issues. I have decided not to pursue further fixes due to time constraints.
 
 ## Validation testing
 
-* [The CI Python Linter](https://pep8ci.herokuapp.com/#) had been running testing and there are lots of errors and fixing the bugs. Now there are no errors.
+### HTML
+* An error-free website, featuring a seamless user experience. Our Home, Order food menu, About Us, and Contact pages have been meticulously reviewed and corrected to ensure optimal functionality. Our overlay model login and signup buttons remain unchanged.
 
-<details>
-<summary><strong style="font-size:18px">See images sections click here</strong></summary>
+### CSS
+- The official (Jigsaw) validator. It was all passed and no errors.
 
-## lot of the errors
+### The devices
 
-<br>
-  <img src="assets/images/Show_Errors_CI_Python_liner.png" alt="Screenshot show the website called 'CI Python linter, display a lot of errors">
-<br>
+* iPhone reviewed and corrected to ensure optimal functionality and it looks good.
 
-## Last Error
 
-<br>
-  <img src="assets/images/Last_Error_CI_Python_liner.png" alt="Screenshot show the website called 'CI Python linter, less the errors">
-<br>
+## Validation testing
 
-## No Error
-
-<br>
-
-  <img src="assets/images/No_Error_CI_liner.png" alt="Screenshot show the website called 'CI Python linter, all clear the errors">
-<br>
-
-</details>
-
-# Deployment
-
-[The Heroku app page](https://www.heroku.com/) where is deployed. How do processing the site deployed as follows:
-
-* Login
-* use the Google Authenticator app and open the screen display of the code number
-and Verify Your Identity page "Verification Code" and insert the code in the box
-then click on Verify button.
-* Click on the button "Create new app"
-* Type in the box "project-3-robert-quinlan"
-* Select Europe
-* Click on the "Create app" button
-* To click "project-3-robert-quinlan" to open
-* Click on "Deploy" on the top menu
-* On RQISL next to the box copy from GitHub <https://github.com/RQISL/portfolio-project-3-robert-quinlan> to paste onto the box then click on to "search" button
-* prompt shows the link active then click on the "connect" button
-* Make sure to check the "Enable Automatic" button is on
-* click on the "Deploy Branch" button
-* Prompts active on the screen until the completed
-* Click on the "View" button to open the page
-* I would <strong>recommend</strong> to use Safari or Firefox browser compatibility
-
-### The deployed site is now live [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/)
+* [The CI Python Linter](https://pep8ci.herokuapp.com/#) had been running testing and there are lots of errors and fixing the bugs. It was all no errors.
 
 ## Credits
 
-I learned very new to me use Python. I enjoyed creating the Tic Tac Toe in Python.
+The Django CRUD tutorial is designed to help new users navigate the complexities of creating, reading, updating, and deleting data in Django. Our tutorial is designed to provide a comprehensive overview of CRUD, with a focus on troubleshooting common errors. With our step-by-step guidance, you'll learn how to identify and resolve errors and become familiar with the process of working with Django. 
 
-The Tutors team was great support and encourage me to developed learning to use Python.
+Our experienced tutors are on hand to provide support and advice, ensuring that you have all the tools you need to succeed. Whether you're a beginner or an experienced developer, our Django CRUD tutorial is an essential resource for mastering this critical aspect of Django development.
 
-My mentor had good feedback and helps with my process improvement on the site project.
+Our mentor advised me where my concept can challenge and learn from mistakes, easily manage projects and avoid unnecessary complications. Take control of the development process and achieve success. It was more complications than I expected.  
 
-## Resouce & tutorial
 
-* ### I learned as many resources as possible I could learn how use create the Tic Tac Toe game in Python
+## Resource & tutorial
+* ### I learned as many resources as possible I learned how to use Create for the cart, profile, and CRUD.
 
-### Example Flowchat to help me design the flowchart as see [Flowchart](#flowchart) above
-
-1) <https://www.programiz.com/article/flowchart-programming>
-2) <https://problemsolvingwithpython.com/08-If-Else-Try-Except/08.06-Flowcharts/>
-
-### Tic Tac Toe tutorials, help me to concept how I create the coding in Python
+### Resources and tutorials: *****Pick the links on my notes******
 
 1) <https://www.youtube.com/watch?v=dK6gJw4-NCo&t=32s>
 2) <https://www.youtube.com/watch?v=M3G1ZgOMFxo>
@@ -229,25 +226,22 @@ My mentor had good feedback and helps with my process improvement on the site pr
 5) <https://www.youtube.com/watch?v=BHh654_7Cmw>
 6) <https://www.youtube.com/watch?v=n2o8ckO-lfk>
 
-### Color, I choose these for my project and I want to learn various syntaxes for the color option to use
-
-1) <https://pypi.org/project/colored/>
-2) <https://www.geeksforgeeks.org/print-colors-python-terminal/>
-3) <https://www.studytonight.com/python-howtos/how-to-print-colored-text-in-python#google_vignette>
-4) <https://pypi.org/project/colorama/>
-
-### Error Handles tutorials, helps me to see how can I create the error handle
-
-1) <https://www.freecodecamp.org/news/how-to-handle-errors-in-python/>
-2) <https://www.geeksforgeeks.org/handling-nameerror-exception-in-python/>
-3) <https://www.w3schools.com/python/python_try_except.asp>  
 
 ## Technologies Used
 
-1) [Code Anywhere](https://app.codeanywhere.com/) - Active development in Python
+1)	[Code Anywhere](https://app.codeanywhere.com/) - Active development in Python had been issues and delayed. I decided to move to Gitpod and continue working on further projects.
+2)	
 2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to fix the bugs
-3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser. My project is completed and now live [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/)
+3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser. My project is completed and now live [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/) 
 
-## Concluded
+4) [Adobe Photoshop](https://app.codeanywhere.com/) - Active development in Python
+5) [Adobe Illrusrator](https://app.codeanywhere.com/) - Active development in Python
+6)
 
-* I completed my concept project for the Tic Tac Toe. I created very basic Python. The site lives [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/)
+
+
+
+## Concluded 
+
+* Order Foods & Delivery, a concept project brought to life. Visit the site 
+[Order Foods & Delivery](https://project-3-robert-quinlan.herokuapp.com/).
