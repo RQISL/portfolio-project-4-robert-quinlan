@@ -95,7 +95,7 @@ See attached for colour options by found the colour pallet. I followed the image
 
 ## Logo: Food Location image and aside of title “Order Food & Delivery
 
-![CI logo](media/images_readme/Site_pages/Logo_page.png)
+![](media/images_readme/Logo/Logo_page.png)
 
 Features
 -------------
