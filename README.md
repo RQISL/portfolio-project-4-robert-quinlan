@@ -153,7 +153,7 @@ Existing Features
 ## Order Foods > Order Menu page
 * The user-friendly food ordering system. Simply click to order, clickable Collapse, select the menu, fill in your address details, Once satisfied, click "order place" and receive a redirect to confirm the list price and total. Check out our attached screenshots for a preview. 
 
-* ### Order Menu
+### Order Menu
 * 
     <details>
         <summary>Click here to see order menu page</summary>
@@ -161,14 +161,14 @@ Existing Features
     </details>
 
 
-* ### Order Menu > Menu Collapse
+### Order Menu > Menu Collapse
 * 
     <details>
         <summary>Click here to see menu collapse</summary>
         <img src="media/images_readme/Site_pages/Select_menu_list_foods_page.png" alt=“Display clickable collapse of the menu lists”>
     </details>
 
-* ### Order Menu > Order Place button or Go Home page
+### Order Menu > Order Place button or Go Home page
 * 
     <details>
         <summary>Click here to see overlay prompt order place or go to home button</summary>
@@ -176,7 +176,7 @@ Existing Features
     </details>
 
 
-* ### Order Menu > order confirmed
+### Order Menu > order confirmed
 * 
     <details>
         <summary>Click here to see order confirm price in total page > Sign-up page</summary>
@@ -189,21 +189,21 @@ Existing Features
 
 * Please note that this is a basic implementation of CRUD functionality. Check out the attached screenshots for a preview.
 
-* ## Profile page
+## Profile page
 * 
     <details>
         <summary>Click here to see profile page</summary>
         <img src="media/images_readme/Site_pages/Profile_page.png" alt=“profile page“>
     </details>
 
-* ## Profile page > Profile editing page
+## Profile page > Profile editing page
 * 
     <details>
         <summary>Click here to see profile editing</summary>
         <img src="media/images_readme/Site_pages/Profile_edit_page.png" alt=“Display profile editing page”>
     </details>
 
-* ## Profile page > Profile create page
+## Profile page > Profile create page
 * 
     <details>
         <summary>Click here to see Add profile> Sign-up page</summary>
@@ -212,22 +212,22 @@ Existing Features
 
 
 ## Logout page
-* The user-friendly website with a convenient logout feature is located on the nav bar. Upon clicking, a prompt will appear to confirm the user's intention to sign out. Once confirmed, the user will be redirected to the Home page and the nav bar will disappear from the profile and logout. Additionally, our website includes a helpful reminder to order food, prompting users to login or sign up again. 
+The user-friendly website with a convenient logout feature is located on the nav bar. Upon clicking, a prompt will appear to confirm the user's intention to sign out. Once confirmed, the user will be redirected to the Home page and the nav bar will disappear from the profile and logout. Additionally, our website includes a helpful reminder to order food, prompting users to login or sign up again. 
 
-* Please refer to the attached screenshots for a visual representation.
+### Please refer to the attached screenshots for a visual representation.
 * 
     <details>
         <summary>Click here to see logout page</summary>
-        <img src="media/images_readme/Site_pages/Logut_page.png" alt="Display logout page”>
+         <img src="media/images_readme/Site_pages/Create_profile_page.png" alt=“Display add to create profile page”>
     </details>
 
-
 ## About Us page
+
 * The order food and delivery service through our informative "About Us" page. See screenshot.
 * 
     <details>
-        <summary>Click here to see about us page</summary>
-        <img src="media/images_readme/Site_pages/About_page.png" alt=“Display image of style fresh foods on the table and right text”>
+            <summary>Click here to see about us page</summary>
+            <img src="media/images_readme/Site_pages/About_page.png" alt=“Display image of style fresh foods on the table and right text”>
     </details>
 
 
@@ -236,54 +236,55 @@ Existing Features
 * 
     <details>
         <summary>Click here to see contact form page</summary>
-        <img src="media/images_readme/Site_pages/contact_page.png" alt="Display contact form page”>
+        <img src="media/images_readme/Site_pages/contact_page.png">
     </details>
-
 
 ## Contact page > Response "Thank you message"
 * 
     <details>
         <summary>Click here to see response “thank you” message page</summary>
-        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png" alt="Display response as thank you with message page”>
+        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png">
     </details>
 
 
 ## Footer 
+
 * "Order Foods & Delivery" title display with a copyright symbol. Simple design and development. Screenshot attached.
+
 * 
     <details>
-        <summary>Click here to see footer> Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Footer_page.png" alt="Display footer page”>
+        <summary>Click here to see footer page</summary>
+        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png">
     </details>
 
 
 # Site Administration
 
-You would need access administration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will receive username and password.
+* You would need access administration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will receive username and password.
 
 * ### General Admin site
-     * The general admin site offers a range of features including email address management, user and group management, category organisation, contact views, menu item customisation, order models, profile views, social account integration, social application tokens, and social applications. Ideal for staffs and chefs efficient online presence management.
+    * The general admin site offers a range of features including email address management, user and group management, category organisation, contact views, menu item customisation, order models, profile views, social account integration, social application tokens, and social applications. Ideal for staffs and chefs efficient online presence management.
     * 
         <details>
             <summary>Click here to see a general admin site</summary>
-            <img src="media/images_readme/Admin_page/General_admin_site.png" alt=“Display general admin site”>
+            <img src="media/images_readme/Admin_page/General_admin_site.png">
         </details>
 
 * ### Group & User
-     * An enables group name addition for staff, granting access to the administration page. Easily identify users without admin access through the red spot list.
+    * An enables group name addition for staff, granting access to the administration page. Easily identify users without admin access through the red spot list.
     * 
         <details>
             <summary> Click here to see Group & User</summary>
-            <img src="media/images_readme/Admin_page/User_info_admin_page.png" alt="Display Groups & Users page”>
+            <img src="media/images_readme/Admin_page/User_info_admin_page.png">
         </details>
 
 
 * ### Catageroy list foods
-     * A comprehensive solution for staff and chefs to manage their menu items with ease. With added categories such as Starter, Soup, Main, Dessert, and Drink, to allows for administration on your site.
+    * A comprehensive solution for staff and chefs to manage their menu items with ease. With added categories such as Starter, Soup, Main, Dessert, and Drink, to allows for administration on your site.
     * 
         <details>
             <summary>Click here to see lists of menu</summary>
-            <img src="media/images_readme/Admin_page/List_meun_admin_page.png" alt="Display list of name of meal page”>
+            <img src="media/images_readme/Admin_page/List_meun_admin_page.png">
         </details>
     * 
         <details>
@@ -292,16 +293,16 @@ You would need access administration page at [Order Foods & Delivery](https://pr
         </details>
 
 * ### Customers information
-     * The ordering system, derived from customer order menus. This system allows for easy viewing of order details, streamlining the ordering process.
+    * The ordering system, derived from customer order menus. This system allows for easy viewing of order details, streamlining the ordering process.
     * 
         <details>
             <summary> Click here to see order list customers</summary>
-            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png" alt="Display order list from customers list their order meal”>
+            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png">
         </details>
     * 
         <details>
             <summary> Click here to see view customers information</summary>
-            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png" alt="Display customer’s view order meal and detail their address”>
+            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png">
         </details>
 
 * ### Profile view
@@ -309,12 +310,12 @@ You would need access administration page at [Order Foods & Delivery](https://pr
     * 
         <details>
             <summary> Click here to see profile view</summary>
-            <img src="media/images_readme/Admin_page/Profile_admin_page.png" alt="Display profile view page”>
+            <img src="media/images_readme/Admin_page/Profile_admin_page.png">
         </details>
     * 
         <details>
             <summary> Click here to see profile's information view</summary>
-            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png" alt="Display open their profile information page”>
+            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png">
         </details>
 
 * ### customers' contact view
@@ -322,12 +323,12 @@ You would need access administration page at [Order Foods & Delivery](https://pr
     * 
         <details>
             <summary>Click here to see contact lists</summary>
-            <img src="media/images_readme/Admin_page/contact_info_admin_page.png" alt="Display list from the customer’s contact their enquiries”>
+            <img src="media/images_readme/Admin_page/contact_info_admin_page.png">
         </details>
     * 
         <details>
             <summary>Contact's information view</summary>
-            <img src="media/images_readme/Admin_page/contact_view.png" alt="Display open customer’s enquiry message view”>
+            <img src="media/images_readme/Admin_page/contact_view.png">
         </details>
 
 ## Testing
@@ -341,7 +342,7 @@ You would need access administration page at [Order Foods & Delivery](https://pr
 * 
     <details>
         <summary>Click here to see compared between Chrome & Safari</summary>
-        <img src="media/images_readme/Site_pages/Chrome_and_Safari.png" alt="Display compare between Google Chrome & Safari for developer tools”>
+        <img src="media/images_readme/Site_pages/Chrome_and_Safari.png">
     </details>
 
 
@@ -355,7 +356,7 @@ You would need access administration page at [Order Foods & Delivery](https://pr
 
    <details>
         <summary>Click here to see both desktop and mobile performance results</summary>
-        <img src="media/images_readme/Site_pages/Desktop_and_Mobile_results.png" alt="Display both desktop and mobile performance results”>
+        <img src="media/images_readme/Site_pages/Desktop_and_Mobile_results.png">
     </details>
 
 
@@ -445,4 +446,5 @@ then click on Verify button.
 * This product is a website that has limited functionality for user login and profile management, including the admin page. Additionally, the CRUD feature is not fully operational due to time constraints.
 
 * Order Foods & Delivery, a concept project brought to life. Visit the site [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/).
+
 
