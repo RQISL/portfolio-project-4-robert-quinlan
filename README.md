@@ -61,7 +61,7 @@ ____________________________________________________________
 
 ![Wireframe Mobile](media/images_readme/Wireframe/Mobile_full.png)
 
-## Colour Pallet
+## Colour Palellet
 
 * A food table style that offers a luxurious and modern colour pallet of your choice. The display of healthy foods is sure to catch your eye. Inspired by the beautiful UX of [Adachi Restaurant](https://adachirestaurant.com/), I have developed an idea UX.
 
@@ -304,26 +304,25 @@ Existing Features
 ## Resource & tutorial
 * ### I learned as many resources as possible I learned how to use Create for the cart, profile, and CRUD.
 
-### Resources and tutorials: *****Pick the links on my notes******
+### Resources and tutorials:
 
-1) <https://www.youtube.com/watch?v=dK6gJw4-NCo&t=32s>
-2) <https://www.youtube.com/watch?v=M3G1ZgOMFxo>
-3) <https://medium.com/@estebanthi/tic-tac-toe-game-in-python-for-beginners-6c09bb63eb84>
-4) <https://www.javatpoint.com/tic-tac-toe-in-python>
-5) <https://www.youtube.com/watch?v=BHh654_7Cmw>
-6) <https://www.youtube.com/watch?v=n2o8ckO-lfk>
-
+1) [How to Highlight Active Links in your Django Website](https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website) 
+2) [Django Login](https://valerymelou.com/blog/2020-05-04-how-to-highlight-active-links-in-your-django-website) 
+3) [Building a Food Delivery Web App With Django and Python 1 to 7 parts](https://www.youtube.com/watch?v=msmtduZfAHo&list=PLPSM8rIid1a0qiCpbfujex5lZoXr2SRFC) 
+4) [Django - User Profile](https://dev.to/earthcomfy/django-user-profile-3hik) 
+5) [Django - CRUD](https://dev.to/earthcomfy/django-user-profile-3hik) 
+6) [Django-widget-tweaks](https://pypi.org/project/)
 
 ## Technologies Used
 
-1)	[Code Anywhere](https://app.codeanywhere.com/) - Active development in Python had been issues and delayed. I decided to move to Gitpod and continue working on further projects.
-2)	
+1)	[Code Anywhere](https://app.codeanywhere.com/) - Active development in Python had been issues and delayed. I decided to move to [Gitpod](https://gitpod.io) and continue working on further projects.
 2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to fix the bugs
-3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser. My project is completed and now live [Tic Tac Toe](https://project-3-robert-quinlan.herokuapp.com/) 
+3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser. My project is completed and now live  [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/) 
 
-4) [Adobe Photoshop](https://app.codeanywhere.com/) - Active development in Python
+4) [Canva Moodboard](https://www.canva.com/) - Create moodboard with colour palellet. See link above [Colour Palette](#colour-palette)
+
 5) [Adobe Illrusrator](https://app.codeanywhere.com/) - Active development in Python
-6)
+6) [Adobe Photoshop](https://app.codeanywhere.com/) - Active development in Python
 
 
 
