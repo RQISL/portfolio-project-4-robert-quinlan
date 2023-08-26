@@ -12,18 +12,24 @@ ____________________________________________________________
 ------------------------------------------------------------------------------------
 ## Agile management
 
-* The concept introduced for the Order Foods & Delivery project, is a comprehensive solution for food ordering and delivery. Developed through a 16-stage process utilizing Agile management, this project was completed. 
+* The concept introduced for the Order Foods & Delivery project, is a comprehensive solution for food ordering and delivery. Developed through a 16-stage process utilising Agile management, this project was completed. 
 
-* The Agile management can find the link at [Robert’s github]( https://github.com/RQISL/portfolio-project-4-robert-quinlan/issues?q=is%3Aissue+is%3Aclosed) and [github milestone](https://github.com/RQISL/portfolio-project-4-robert-quinlan/milestones) and milestone showcases the screenshots of progress made from start to finish below:
+* The Agile management can find the link at [Robert’s Github](https://github.com/RQISL/portfolio-project-4-robert-quinlan/issues?q=is%3Aissue+is%3Aclosed) and [Github milestone](https://github.com/RQISL/portfolio-project-4-robert-quinlan/milestones) and milestone showcases the screenshots of progress made from start to finish below:
 
 * ### Agile Management:
 
-* Please note on the first image white after that I changed mode to dark screen as my perferred.
+* Please note on the first image white after that I changed mode to dark screen as my preferred.
 
 * 
     <details>
-        - <summary>Click here to see three milestones from start, middle and finish:</summary>
-        <img src="media/images_readme/Agile/Untitled-1.png" alt="Three milestones from start, middle & finish">
+        <summary>Click here to see the board:</summary>
+        <img src="media/images_readme/Agile/board screen.png" alt="Three milestones from start, middle & finish">
+    </details>
+
+* 
+    <details>
+        <summary>Click here to see the from start, middle and finish on the milestones:</summary>
+        <img src="media/images_readme/Agile/first_middle_last.png" alt="Three milestones from start, middle & finish">
     </details>
 
 ## Concept Project
@@ -43,10 +49,14 @@ ____________________________________________________________
 -------------------------------------------------------------------------------------------------
 # Create design UX for the Order Foods site
 
- # Quick Sketch UX
- * ## Desktop & Mobile
+ ## Quick Sketch UX
+ * ## Desktop
 
-![Quick Sketch](assets/Image-for-ReadMe/SketchDesktopandMobile.png)
+* 
+    <details>
+        <summary>Click here to see quick sketch</summary>
+        <img src="media/images_readme/Mindmap/Quik_Sketch.png" alt="Quick sketch for UX by hand">
+    </details>
 
 # Wireframe 
 * # Design wireframe UX for Desktop & Mobile
@@ -61,12 +71,12 @@ ____________________________________________________________
 
 ![Wireframe Mobile](media/images_readme/Wireframe/Mobile_full.png)
 
-## Colour Palellet
+## Colour Palette
 
 * A food table style that offers a luxurious and modern colour pallet of your choice. The display of healthy foods is sure to catch your eye. Inspired by the beautiful UX of [Adachi Restaurant](https://adachirestaurant.com/), I have developed an idea UX.
 
-* The ccolour palette is Shark, Nomad, Mantle and Manatee, available in a range of stunning colours. Choose from our carefully curated colour palette, found at at [Canva](https://www.google.com/search?sca_esv=560184847&q=shark+nomad+mantle+and+manatee+color+palette+with+images&tbm=isch#imgrc=qecGZ40hJUIG4M) to create moodboard.
-See attached for colour options by found the colour pallet. I followed the image of colour palette and sign-in to canva, where I was created of the moodboard. See attached below:
+* The colour palette is Shark, Nomad, Mantle and Manatee, available in a range of stunning colours. Choose from our carefully curated colour palette, found at at [Canvas](https://www.google.com/search?sca_esv=560184847&q=shark+nomad+mantle+and+manatee+color+palette+with+images&tbm=isch#imgrc=qecGZ40hJUIG4M) to create moodboard.
+See attached for colour options by found the colour pallet. I followed the image of colour palette and sign-in to canvas, where I was created of the moodboard. See attached below:
 
 * 
     <details>
@@ -79,7 +89,8 @@ See attached for colour options by found the colour pallet. I followed the image
         <img src="media/images_readme/Mindmap/Order_and_Foods.png" alt="create layout with colour and craft design moodboard">
     </details>
 
--------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------      
 # Design and development the Order Foods & Delivery for desktop & mobile devices
 
 ## Logo: Food Location image and aside of title “Order Food & Delivery
@@ -107,7 +118,6 @@ Existing Features
 
 ## The picture below:
 
-
 ## Home page
 * Professional product description: 
 
@@ -115,62 +125,62 @@ Existing Features
 
     <details>
         <summary>Click here to see Home page</summary>
-        <img src="media/images_readme/Site_pages/Home_page.png" alt="Design Home page on left side image and rigth text">
+        <img src="media/images_readme/Site_pages/Home_page.png" alt="Design Home page on left side image and right text">
     </details>
 
 ## Order Foods page > Login or Sign-up
 * The user-friendly food ordering system. With just a click to “order food”, users can easily order their favourite foods. New users are prompted to login or sign up before being redirected to the menu selection page. Check out the attached screenshots for a preview.
 * 
     <details>
-        <summary>Click here to see Order Foods page > login or sign-up</summary>
-        <img src="media/images_readme/Site_pages/Either_login_signup_button.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see prompt button “login” or “sign-up” > login or sign-up</summary>
+        <img src="media/images_readme/Site_pages/Either_login_signup_button.png" alt=“prompt overlay with small screen “login” or “sign-up”>
     </details>
 
 ## Order Foods > Login page
 * 
     <details>
-        <summary>Click here to see Order Foods > Login page</summary>
-        <img src="media/images_readme/Site_pages/Either_login_signup_button.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see login page</summary>
+        <img src="media/images_readme/Site_pages/Either_login_signup_button.png" alt=“Login page”>
     </details>
 
 ## Order Foods > Sign-up page
 *   
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Signup_page_desktop.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see sign-up page</summary>
+        <img src="media/images_readme/Site_pages/Signup_page_desktop.png" alt=“Sign-up page”>
     </details>
 
 ## Order Foods > Order Menu page
-* The user-friendly food ordering system. Simply click to order, clikable Collapse, select the menu, fill in your address details, Once satisfied, click "order place" and receive a redirect to confirm the list price and total. Check out our attached screenshots for a preview. 
+* The user-friendly food ordering system. Simply click to order, clickable Collapse, select the menu, fill in your address details, Once satisfied, click "order place" and receive a redirect to confirm the list price and total. Check out our attached screenshots for a preview. 
 
 * ### Order Menu
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Menu_page_desktop.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see order menu page</summary>
+        <img src="media/images_readme/Site_pages/Menu_page_desktop.png" alt=“Display menu list selects”>
     </details>
 
 
 * ### Order Menu > Menu Collapse
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Select_menu_list_foods_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see menu collapse</summary>
+        <img src="media/images_readme/Site_pages/Select_menu_list_foods_page.png" alt=“Display clickable collapse of the menu lists”>
     </details>
 
 * ### Order Menu > Order Place button or Go Home page
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Order_place_button.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see overlay prompt order place or go to home button</summary>
+        <img src="media/images_readme/Site_pages/Order_place_button.png" alt=“Display overlay prompt order place or go to home button”>
     </details>
 
 
 * ### Order Menu > order confirmed
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Order_confirm_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see order confirm price in total page > Sign-up page</summary>
+        <img src="media/images_readme/Site_pages/Order_confirm_page.png" alt=“Display order confirm price in total page”>
     </details>
 
 
@@ -182,22 +192,22 @@ Existing Features
 * ## Profile page
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Profile_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see profile page</summary>
+        <img src="media/images_readme/Site_pages/Profile_page.png" alt=“profile page“>
     </details>
 
 * ## Profile page > Profile editing page
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Profile_edit_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see profile editing</summary>
+        <img src="media/images_readme/Site_pages/Profile_edit_page.png" alt=“Display profile editing page”>
     </details>
 
 * ## Profile page > Profile create page
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Create_profile_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see Add profile> Sign-up page</summary>
+        <img src="media/images_readme/Site_pages/Create_profile_page.png" alt=“Display add to create profile page”>
     </details>
 
 
@@ -207,8 +217,8 @@ Existing Features
 * Please refer to the attached screenshots for a visual representation.
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Logut_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see logout page</summary>
+        <img src="media/images_readme/Site_pages/Logut_page.png" alt="Display logout page”>
     </details>
 
 
@@ -216,8 +226,8 @@ Existing Features
 * The order food and delivery service through our informative "About Us" page. See screenshot.
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/About_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see about us page</summary>
+        <img src="media/images_readme/Site_pages/About_page.png" alt=“Display image of style fresh foods on the table and right text”>
     </details>
 
 
@@ -225,16 +235,16 @@ Existing Features
 * Professional contact form with redirect to thank you page. Guaranteed response within 3 business days.
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/contact_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see contact form page</summary>
+        <img src="media/images_readme/Site_pages/contact_page.png" alt="Display contact form page”>
     </details>
 
 
-## Contact page > Responsive "Thank you message"
+## Contact page > Response "Thank you message"
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see response “thank you” message page</summary>
+        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png" alt="Display response as thank you with message page”>
     </details>
 
 
@@ -242,20 +252,21 @@ Existing Features
 * "Order Foods & Delivery" title display with a copyright symbol. Simple design and development. Screenshot attached.
 * 
     <details>
-        <summary>Click here to see Order Foods > Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Footer_page.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see footer> Sign-up page</summary>
+        <img src="media/images_readme/Site_pages/Footer_page.png" alt="Display footer page”>
     </details>
+
 
 # Site Administration
 
-You would need access adminration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will recevie username and password.
+You would need access administration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will receive username and password.
 
 * ### General Admin site
-     * The general admin site offers a range of features including email address management, user and group management, category organization, contact views, menu item customization, order models, profile views, social account integration, social application tokens, and social applications. Ideal for staffs and chefs efficient online presence management.
+     * The general admin site offers a range of features including email address management, user and group management, category organisation, contact views, menu item customisation, order models, profile views, social account integration, social application tokens, and social applications. Ideal for staffs and chefs efficient online presence management.
     * 
         <details>
-            <summary>Click here to see a gerenal admin site</summary>
-            <img src="media/images_readme/Admin_page/General_admin_site.png" alt="Design Home page on left side image and rigth text">
+            <summary>Click here to see a general admin site</summary>
+            <img src="media/images_readme/Admin_page/General_admin_site.png" alt=“Display general admin site”>
         </details>
 
 * ### Group & User
@@ -263,34 +274,34 @@ You would need access adminration page at [Order Foods & Delivery](https://proje
     * 
         <details>
             <summary> Click here to see Group & User</summary>
-            <img src="media/images_readme/Admin_page/User_info_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <img src="media/images_readme/Admin_page/User_info_admin_page.png" alt="Display Groups & Users page”>
         </details>
 
 
-* ### Calageroy list foods
+* ### Catageroy list foods
      * A comprehensive solution for staff and chefs to manage their menu items with ease. With added categories such as Starter, Soup, Main, Dessert, and Drink, to allows for administration on your site.
     * 
         <details>
             <summary>Click here to see lists of menu</summary>
-            <img src="media/images_readme/Admin_page/List_meun_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <img src="media/images_readme/Admin_page/List_meun_admin_page.png" alt="Display list of name of meal page”>
         </details>
     * 
         <details>
             <summary>Click here to see add menu with description</summary>
-            <img src="media/images_readme/Admin_page/add meun_list_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <img src="media/images_readme/Admin_page/add meun_list_admin_page.png" alt=“Display input form for name meal and desripatigon page”>
         </details>
 
-* ### Cusmoters information
+* ### Customers information
      * The ordering system, derived from customer order menus. This system allows for easy viewing of order details, streamlining the ordering process.
     * 
         <details>
             <summary> Click here to see order list customers</summary>
-            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png" alt="Display order list from customers list their order meal”>
         </details>
     * 
         <details>
-            <summary> Click here to see view customers infomation</summary>
-            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <summary> Click here to see view customers information</summary>
+            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png" alt="Display customer’s view order meal and detail their address”>
         </details>
 
 * ### Profile view
@@ -298,12 +309,12 @@ You would need access adminration page at [Order Foods & Delivery](https://proje
     * 
         <details>
             <summary> Click here to see profile view</summary>
-            <img src="media/images_readme/Admin_page/Profile_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <img src="media/images_readme/Admin_page/Profile_admin_page.png" alt="Display profile view page”>
         </details>
     * 
         <details>
-            <summary> Click here to see profile's infomation view</summary>
-            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <summary> Click here to see profile's information view</summary>
+            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png" alt="Display open their profile information page”>
         </details>
 
 * ### customers' contact view
@@ -311,12 +322,12 @@ You would need access adminration page at [Order Foods & Delivery](https://proje
     * 
         <details>
             <summary>Click here to see contact lists</summary>
-            <img src="media/images_readme/Admin_page/contact_info_admin_page.png" alt="Design Home page on left side image and rigth text">
+            <img src="media/images_readme/Admin_page/contact_info_admin_page.png" alt="Display list from the customer’s contact their enquiries”>
         </details>
     * 
         <details>
-            <summary>Contact's infomation view</summary>
-            <img src="media/images_readme/Admin_page/contact_view.png" alt="Design Home page on left side image and rigth text">
+            <summary>Contact's information view</summary>
+            <img src="media/images_readme/Admin_page/contact_view.png" alt="Display open customer’s enquiry message view”>
         </details>
 
 ## Testing
@@ -330,21 +341,21 @@ You would need access adminration page at [Order Foods & Delivery](https://proje
 * 
     <details>
         <summary>Click here to see compared between Chrome & Safari</summary>
-        <img src="media/images_readme/Site_pages/Chrome_and_Safari.png" alt="Design Home page on left side image and rigth text">
+        <img src="media/images_readme/Site_pages/Chrome_and_Safari.png" alt="Display compare between Google Chrome & Safari for developer tools”>
     </details>
 
 
 ## The lighthouse runs testing and results.
 
-* Introducing our innovative product that enhances website performance with ease. The solution includes the addition of Alt tags, the removal of unnecessary HTML tags, and the incorporation of Meta keywords for SEO optimization. 
+* Introducing our innovative product that enhances website performance with ease. The solution includes the addition of Alt tags, the removal of unnecessary HTML tags, and the incorporation of Meta keywords for SEO optimisation. 
 
 * It has been proven to improve website results, even in cases where responsive images have caused performance issues. I have decided not to pursue further fixes due to time constraints.
 
 * ### See attached result both Desktop & Mobile:
 
    <details>
-        <summary>Click here to see compared between Chrome & Safari</summary>
-        <img src="media/images_readme/Site_pages/Desktop_and_Mobile_results.png" alt="Design Home page on left side image and rigth text">
+        <summary>Click here to see both desktop and mobile performance results</summary>
+        <img src="media/images_readme/Site_pages/Desktop_and_Mobile_results.png" alt="Display both desktop and mobile performance results”>
     </details>
 
 
@@ -373,8 +384,30 @@ You would need access adminration page at [Order Foods & Delivery](https://proje
 * Our mentor advised me where my concept can challenge and learn from mistakes, easily manage projects and avoid unnecessary complications. Take control of the development process and achieve success. It was more complications than you expected.  
 
 ## Two things issues
-* The common issues faced with favicons and Prettier Formatter. Our easy-to-use tool ensures seamless coding and eliminates errors but I decided not to fix due to time constraints.
+* The common issues faced with Favicon and Prettier Formatter. Our easy-to-use tool ensures seamless coding and eliminates errors but I decided not to fix due to time constraints.
 
+# Deployment
+
+[The Heroku app page](https://www.heroku.com/) where is deployed. How do processing the site deployed as follows:
+
+* Login 
+* use the Google Authenticator app and open the screen display of the code number 
+and Verify Your Identity page "Verification Code" and insert the code in the box 
+then click on Verify button. 
+* Click on the button "Create new app" 
+* Type in the box “project-4-order-foods”
+* Select Europe
+* Click on the "Create app" button
+* To click "project-4-order-foods" to open
+* Click on "Deploy" on the top menu
+* On RQISL next to the box copy from GitHub <https://github.com/RQISL/portfolio-project-4-robert-quinlan> to paste onto the box then click on to "search" button 
+* prompt shows the link active then click on the "connect" button
+* Make sure to check the "Enable Automatic" button is on
+* click on the "Deploy Branch" button
+* Prompts active on the screen until the completed
+* Click on the "View" button to open the page
+
+### The deployed site is now live [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/)
 
 ## Resource & tutorial
 * ### I learned as many resources as possible I learned how to use Create for the cart, profile, and CRUD.
@@ -392,21 +425,24 @@ You would need access adminration page at [Order Foods & Delivery](https://proje
 
 ## Technologies Used
 
-1)	[Code Anywhere](https://app.codeanywhere.com/) - Active development in Python had been issues and delayed. I decided to move to [Gitpod](https://gitpod.io) and continue working on further projects.
+1)  [Code Anywhere](https://app.codeanywhere.com/) - Active development in Python had been issues and delayed. I decided to move to [Gitpod](https://gitpod.io) and continue working on further projects.
 2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to be fix the bugs
 3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser.
 
-4) [Canva Moodboard](https://www.canva.com/) - Create moodboard with colour palellet.
+4) [Canvas Moodboard](https://www.canva.com/) - Create moodboard with colour palette.
 
 5) [3WC HTML Validator](https://validator.w3.org/) - Run testing any errors to be fix the bugs
 
 6) [3WC CSS Validator](https://jigsaw.w3.org/css-validator/)  - Run testing any errors to be fix the bugs
 
-7) Adobe Illrusrator
-8) Adobe Photoshop
+7) [Free Licence download images](https://www.vecteezy.com/free-photos/meal?page=2 )  - I used download free licence images.
+
+8) Adobe Illustrator
+9) Adobe Photoshop
 
 ## Concluded 
 
 * This product is a website that has limited functionality for user login and profile management, including the admin page. Additionally, the CRUD feature is not fully operational due to time constraints.
 
 * Order Foods & Delivery, a concept project brought to life. Visit the site [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/).
+
