@@ -95,7 +95,7 @@ See attached for colour options by found the colour pallet. I followed the image
 
 ## Logo: Food Location image and aside of title “Order Food & Delivery
 
-![](media/images_readme/Logo/Logo_page.png)
+![](media/images_readme/Site_pages/Logo_page.png)
 
 Features
 -------------
@@ -114,7 +114,7 @@ Existing Features
 ### Logo and Navbar
 * Clickable logo directs users to the Home page, activating upon click for seamless navigation. Streamline your browsing experience. See screenshot.
 
-![](media/images_readme/Site_pages/Nabar.png)
+![](media/images_readme/Site_pages/Navbar_page.png)
 
 ## The picture below:
 
@@ -140,7 +140,7 @@ Existing Features
 * 
     <details>
         <summary>Click here to see login page</summary>
-        <img src="media/images_readme/Site_pages/Either_login_signup_button.png" alt=“Login page”>
+        <img src="media/images_readme/Site_pages/Login_page_desktop.png" alt=“Login page”>
     </details>
 
 ## Order Foods > Sign-up page
@@ -254,13 +254,13 @@ The user-friendly website with a convenient logout feature is located on the nav
 * 
     <details>
         <summary>Click here to see footer page</summary>
-        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png">
+        <img src="media/images_readme/Site_pages/Footer_page.png">
     </details>
 
 
 # Site Administration
 
-* You would need access administration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will receive username and password.
+* You would need access administration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will receive for the username and password.
 
 * ### General Admin site
     * The general admin site offers a range of features including email address management, user and group management, category organisation, contact views, menu item customisation, order models, profile views, social account integration, social application tokens, and social applications. Ideal for staffs and chefs efficient online presence management.
@@ -436,7 +436,7 @@ then click on Verify button.
 
 6) [3WC CSS Validator](https://jigsaw.w3.org/css-validator/)  - Run testing any errors to be fix the bugs
 
-7) [Free Licence download images](https://www.vecteezy.com/free-photos/meal?page=2 )  - I used download free licence images.
+7) [Free Licence download images](https://www.vecteezy.com/free-photos/meal?page=2 )  - I used download for free licence images.
 
 8) Adobe Illustrator
 9) Adobe Photoshop
