@@ -246,6 +246,78 @@ Existing Features
         <img src="media/images_readme/Site_pages/Footer_page.png" alt="Design Home page on left side image and rigth text">
     </details>
 
+# Site Administration
+
+You would need access adminration page at [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/admin/) site. I hope you will recevie username and password.
+
+* ### General Admin site
+     * The general admin site offers a range of features including email address management, user and group management, category organization, contact views, menu item customization, order models, profile views, social account integration, social application tokens, and social applications. Ideal for staffs and chefs efficient online presence management.
+    * 
+        <details>
+            <summary>Click here to see a gerenal admin site</summary>
+            <img src="media/images_readme/Admin_page/General_admin_site.png" alt="Design Home page on left side image and rigth text">
+        </details>
+
+* ### Group & User
+     * An enables group name addition for staff, granting access to the administration page. Easily identify users without admin access through the red spot list.
+    * 
+        <details>
+            <summary> Click here to see Group & User</summary>
+            <img src="media/images_readme/Admin_page/User_info_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+
+
+* ### Calageroy list foods
+     * A comprehensive solution for staff and chefs to manage their menu items with ease. With added categories such as Starter, Soup, Main, Dessert, and Drink, to allows for administration on your site.
+    * 
+        <details>
+            <summary>Click here to see lists of menu</summary>
+            <img src="media/images_readme/Admin_page/List_meun_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+    * 
+        <details>
+            <summary>Click here to see add menu with description</summary>
+            <img src="media/images_readme/Admin_page/add meun_list_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+
+* ### Cusmoters information
+     * The ordering system, derived from customer order menus. This system allows for easy viewing of order details, streamlining the ordering process.
+    * 
+        <details>
+            <summary> Click here to see order list customers</summary>
+            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+    * 
+        <details>
+            <summary> Click here to see view customers infomation</summary>
+            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+
+* ### Profile view
+     * The profile system, accessible by clicking on a user's name to view their information. While users cannot modify staff admin profiles, creating a clear distinction between staff and users can be challenging. With ample time, you would strive to perfect this feature for seamless user experience.
+    * 
+        <details>
+            <summary> Click here to see profile view</summary>
+            <img src="media/images_readme/Admin_page/Profile_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+    * 
+        <details>
+            <summary> Click here to see profile's infomation view</summary>
+            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+
+* ### customers' contact view
+     * The contact system, easily accessible by clicking on a user's name to view their contact information. Our staff is readily available to respond to any enquiries you may have.
+    * 
+        <details>
+            <summary>Click here to see contact lists</summary>
+            <img src="media/images_readme/Admin_page/contact_info_admin_page.png" alt="Design Home page on left side image and rigth text">
+        </details>
+    * 
+        <details>
+            <summary>Contact's infomation view</summary>
+            <img src="media/images_readme/Admin_page/contact_view.png" alt="Design Home page on left side image and rigth text">
+        </details>
 
 ## Testing
 * Our comprehensive testing service ensures browser compatibility across a range of popular browsers including Safari, Google Chrome, Opera, Microsoft Edge, and Firefox. 
@@ -294,11 +366,14 @@ Existing Features
 
 ## Credits
 
-* The Django CRUD tutorial is designed to help new users navigate the complexities of creating, reading, updating, and deleting data in Django. Our tutorial is designed to provide a comprehensive overview of CRUD, with a focus on troubleshooting common errors. With our step-by-step guidance, you'll learn how to identify and resolve errors and become familiar with the process of working with Django. 
+* The Django CRUD tutorial is designed to help new users navigate the complexities of creating, reading, updating, and deleting data in Django. Our tutorial is designed to provide a comprehensive overview of CRUD, with a focus on troubleshooting common errors. With step-by-step guidance, you'll learn how to identify and resolve errors and become familiar with the process of working with Django. 
 
 * Our experienced tutors are on hand to provide support and advice, ensuring that you have all the tools you need to succeed. Whether you're a beginner or an experienced developer, our Django CRUD tutorial is an essential resource for mastering this critical aspect of Django development.
 
-* Our mentor advised me where my concept can challenge and learn from mistakes, easily manage projects and avoid unnecessary complications. Take control of the development process and achieve success. It was more complications than I expected.  
+* Our mentor advised me where my concept can challenge and learn from mistakes, easily manage projects and avoid unnecessary complications. Take control of the development process and achieve success. It was more complications than you expected.  
+
+## Two things issues
+* The common issues faced with favicons and Prettier Formatter. Our easy-to-use tool ensures seamless coding and eliminates errors but I decided not to fix due to time constraints.
 
 
 ## Resource & tutorial
@@ -311,23 +386,27 @@ Existing Features
 3) [Building a Food Delivery Web App With Django and Python 1 to 7 parts](https://www.youtube.com/watch?v=msmtduZfAHo&list=PLPSM8rIid1a0qiCpbfujex5lZoXr2SRFC) 
 4) [Django - User Profile](https://dev.to/earthcomfy/django-user-profile-3hik) 
 5) [Django - CRUD](https://dev.to/earthcomfy/django-user-profile-3hik) 
-6) [Django-widget-tweaks](https://pypi.org/project/)
+6) [Django - Cart](https://www.youtube.com/watch?v=54Op2veKDps&list=PL59NjN2r8ZIxVBiURygpQ0-Rft3VPYKAo&index=10) 
+
+7) [Django-widget-tweaks](https://pypi.org/project/)
 
 ## Technologies Used
 
 1)	[Code Anywhere](https://app.codeanywhere.com/) - Active development in Python had been issues and delayed. I decided to move to [Gitpod](https://gitpod.io) and continue working on further projects.
-2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to fix the bugs
-3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser. My project is completed and now live  [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/) 
+2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to be fix the bugs
+3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser.
 
-4) [Canva Moodboard](https://www.canva.com/) - Create moodboard with colour palellet. See link above [Colour Palette](#colour-palette)
+4) [Canva Moodboard](https://www.canva.com/) - Create moodboard with colour palellet.
 
-5) [Adobe Illrusrator](https://app.codeanywhere.com/) - Active development in Python
-6) [Adobe Photoshop](https://app.codeanywhere.com/) - Active development in Python
+5) [3WC HTML Validator](https://validator.w3.org/) - Run testing any errors to be fix the bugs
 
+6) [3WC CSS Validator](https://jigsaw.w3.org/css-validator/)  - Run testing any errors to be fix the bugs
 
-
+7) Adobe Illrusrator
+8) Adobe Photoshop
 
 ## Concluded 
 
-* Order Foods & Delivery, a concept project brought to life. Visit the site 
-[Order Foods & Delivery](https://project-3-robert-quinlan.herokuapp.com/).
+* This product is a website that has limited functionality for user login and profile management, including the admin page. Additionally, the CRUD feature is not fully operational due to time constraints.
+
+* Order Foods & Delivery, a concept project brought to life. Visit the site [Order Foods & Delivery](https://project-4-order-foods-65605ab1b9f2.herokuapp.com/).
