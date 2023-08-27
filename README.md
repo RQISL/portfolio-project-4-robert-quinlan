@@ -1,6 +1,6 @@
 
 ------------------------------------------------------------------------------------
-### Please note: I am first language is ISL (Irish Sign Language). Despite writing in English as a second language. 
+### Please note: I am first language is ISL (Irish Sign Language). Despite writing in English as a second language.
 ____________________________________________________________
 * Introducing the [Ahrefs Writing Tools Product Description Generator]( https://ahrefs.com/writing-tools/product-description-generator), a powerful tool designed to assist non-native English speakers in crafting professional and polished product descriptions. While subscriptions to this tool can be costly, it has proven to be an invaluable resource for those seeking to improve their English writing skills. With the ability to write and translate English clearly and concisely, users can confidently create product descriptions that are both informative and engaging. Whether you are a business owner or a content creator, the Ahrefs Writing Tools Product Description Generator is a must-have tool for anyone looking to enhance their English writing abilities.
 
