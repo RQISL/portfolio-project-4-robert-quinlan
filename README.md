@@ -218,7 +218,7 @@ The user-friendly website with a convenient logout feature is located on the nav
 * 
     <details>
         <summary>Click here to see logout page</summary>
-         <img src="media/images_readme/Site_pages/Create_profile_page.png" alt=“Display logout page”>
+         <img src="media/images_readme/Site_pages/Logut_page.png" alt=“Display logout page”>
     </details>
 
 ## About Us page
