@@ -429,7 +429,7 @@ then click on Verify button.
 5) [Django - CRUD](https://dev.to/earthcomfy/django-user-profile-3hik) 
 6) [Django - Cart](https://www.youtube.com/watch?v=54Op2veKDps&list=PL59NjN2r8ZIxVBiURygpQ0-Rft3VPYKAo&index=10) 
 
-7) [Django-widget-tweaks](https://pypi.org/project/)
+7) [Django-widget-tweaks](https://pypi.org/project/django-widget-tweaks/)
 
 ## Technologies Used
 
