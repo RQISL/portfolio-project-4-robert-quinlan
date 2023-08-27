@@ -218,7 +218,7 @@ The user-friendly website with a convenient logout feature is located on the nav
 * 
     <details>
         <summary>Click here to see logout page</summary>
-         <img src="media/images_readme/Site_pages/Create_profile_page.png" alt=“Display add to create profile page”>
+         <img src="media/images_readme/Site_pages/Create_profile_page.png" alt=“Display logout page”>
     </details>
 
 ## About Us page
@@ -236,14 +236,14 @@ The user-friendly website with a convenient logout feature is located on the nav
 * 
     <details>
         <summary>Click here to see contact form page</summary>
-        <img src="media/images_readme/Site_pages/contact_page.png">
+        <img src="media/images_readme/Site_pages/contact_page.png" alt=“Display contact page”>
     </details>
 
 ## Contact page > Response "Thank you message"
 * 
     <details>
         <summary>Click here to see response “thank you” message page</summary>
-        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png">
+        <img src="media/images_readme/Site_pages/Response_Thankyou_page.png" alt=“Display response message page”>
     </details>
 
 
@@ -254,7 +254,7 @@ The user-friendly website with a convenient logout feature is located on the nav
 * 
     <details>
         <summary>Click here to see footer page</summary>
-        <img src="media/images_readme/Site_pages/Footer_page.png">
+        <img src="media/images_readme/Site_pages/Footer_page.png" alt=“Display footer bottom page”>
     </details>
 
 
@@ -267,7 +267,7 @@ The user-friendly website with a convenient logout feature is located on the nav
     * 
         <details>
             <summary>Click here to see a general admin site</summary>
-            <img src="media/images_readme/Admin_page/General_admin_site.png">
+            <img src="media/images_readme/Admin_page/General_admin_site.png" alt=“Display general admin page”>
         </details>
 
 * ### Group & User
@@ -275,7 +275,7 @@ The user-friendly website with a convenient logout feature is located on the nav
     * 
         <details>
             <summary> Click here to see Group & User</summary>
-            <img src="media/images_readme/Admin_page/User_info_admin_page.png">
+            <img src="media/images_readme/Admin_page/User_info_admin_page.png" alt=“Display group & user list of page”>
         </details>
 
 
@@ -284,7 +284,7 @@ The user-friendly website with a convenient logout feature is located on the nav
     * 
         <details>
             <summary>Click here to see lists of menu</summary>
-            <img src="media/images_readme/Admin_page/List_meun_admin_page.png">
+            <img src="media/images_readme/Admin_page/List_meun_admin_page.png" alt=“Display catageroy list of foods page”>
         </details>
     * 
         <details>
@@ -297,12 +297,12 @@ The user-friendly website with a convenient logout feature is located on the nav
     * 
         <details>
             <summary> Click here to see order list customers</summary>
-            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png">
+            <img src="media/images_readme/Admin_page/order_food_info_admin_page.png" alt=“Display customers' order lists view page”>
         </details>
     * 
         <details>
             <summary> Click here to see view customers information</summary>
-            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png">
+            <img src="media/images_readme/Admin_page/customer_info_order_foods_admin_page.png" alt=“Display customers' order foods detail view page”>
         </details>
 
 * ### Profile view
@@ -310,12 +310,12 @@ The user-friendly website with a convenient logout feature is located on the nav
     * 
         <details>
             <summary> Click here to see profile view</summary>
-            <img src="media/images_readme/Admin_page/Profile_admin_page.png">
+            <img src="media/images_readme/Admin_page/Profile_admin_page.png" alt=“Display profile view page”>
         </details>
     * 
         <details>
             <summary> Click here to see profile's information view</summary>
-            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png">
+            <img src="media/images_readme/Admin_page/Profile_edit_admin_page.png" alt=“Display profile's detail view page”>
         </details>
 
 * ### customers' contact view
@@ -323,12 +323,12 @@ The user-friendly website with a convenient logout feature is located on the nav
     * 
         <details>
             <summary>Click here to see contact lists</summary>
-            <img src="media/images_readme/Admin_page/contact_info_admin_page.png">
+            <img src="media/images_readme/Admin_page/contact_info_admin_page.png" alt=“Display customers' list of message view page”>
         </details>
     * 
         <details>
             <summary>Contact's information view</summary>
-            <img src="media/images_readme/Admin_page/contact_view.png">
+            <img src="media/images_readme/Admin_page/contact_view.png" alt=“Display customers' message detail view page”>
         </details>
 
 ## Testing
@@ -342,7 +342,7 @@ The user-friendly website with a convenient logout feature is located on the nav
 * 
     <details>
         <summary>Click here to see compared between Chrome & Safari</summary>
-        <img src="media/images_readme/Site_pages/Chrome_and_Safari.png">
+        <img src="media/images_readme/Site_pages/Chrome_and_Safari.png" alt=“Display compared between Chrome & Safari of images”>
     </details>
 
 
@@ -356,7 +356,8 @@ The user-friendly website with a convenient logout feature is located on the nav
 
    <details>
         <summary>Click here to see both desktop and mobile performance results</summary>
-        <img src="media/images_readme/Site_pages/Desktop_and_Mobile_results.png">
+        <img src="media/images_readme/Site_pages/Desktop_and_Mobile_results.png"
+        alt=“Display two images desktop and mobile results of performance”>
     </details>
 
 
@@ -386,6 +387,12 @@ The user-friendly website with a convenient logout feature is located on the nav
 
 ## Two things issues
 * The common issues faced with Favicon and Prettier Formatter. Our easy-to-use tool ensures seamless coding and eliminates errors but I decided not to fix due to time constraints.
+
+* 
+    <details>
+            <summary>Click here to see the red box error</summary>
+            <img src="media/images_readme/Site_pages/Error_favion.png" alt=“Display red box hight to show error of favicon”>
+    </details>
 
 # Deployment
 
@@ -430,7 +437,7 @@ then click on Verify button.
 2) [The CI Python Linter](https://pep8ci.herokuapp.com/#) - Run testing any errors to be fix the bugs
 3) [Heroku app](https://www.heroku.com/) - The deployed to active the browser.
 
-4) [Canvas Moodboard](https://www.canva.com/) - Create moodboard with colour palette.
+4) [Canvas Moodboard](https://www.canva.com/) - Create moodboard with colour palette. [Colour Palette](#colour-palette)
 
 5) [3WC HTML Validator](https://validator.w3.org/) - Run testing any errors to be fix the bugs
 
