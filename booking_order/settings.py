@@ -38,13 +38,14 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-rqisl-portfolioproject-7tqlsgobztx.ws-eu104.gitpod.io',  'https://project-4-order-foods-65605ab1b9f2.herokuapp.com']
+    '8000-rqisl-portfolioproject-onj2fh4s4gp.ws-eu107.gitpod.io', 
+    'https://project-4-order-foods-65605ab1b9f2.herokuapp.com']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-rqisl-portfolioproject-7tqlsgobztx.ws-eu104.gitpod.io',
-               'project-4-order-foods-65605ab1b9f2.herokuapp.com',
+ALLOWED_HOSTS = [
+    '8000-rqisl-portfolioproject-onj2fh4s4gp.ws-eu107.gitpod.io',       'project-4-order-foods-65605ab1b9f2.herokuapp.com',
                  'localhost']
 
 
