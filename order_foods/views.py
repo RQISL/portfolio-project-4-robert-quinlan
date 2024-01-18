@@ -1,8 +1,8 @@
 from .forms import ItemForm, ContactForm
-import json
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import MenuItem, Category, OrderModel, ProfileView, ContactView
+from .models import MenuItem, OrderModel, ProfileView
 from django.contrib import messages
 
 
@@ -135,6 +135,7 @@ class OrderPayConfirmation(View):
 
 
 class Profile_View(View):
+    @login_required
     def get(self, request, *args, **kwargs):
         profile_view = ProfileView.objects.all()
 
@@ -145,11 +146,12 @@ class Profile_View(View):
 
 
 class Profile_Update(View):
+    @login_required
     def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, id=item_id)
+        item = get_object_or_404(ProfileView, user=request.user, id=item_id)
         if request.method == 'POST':
             form = ItemForm(request.POST, instance=item)
-            form.save()
+            form = form.save()
         form = ItemForm(instance=item)
         context = {
             'form': form
@@ -170,6 +172,7 @@ class Profile_Update(View):
 
 
 class Profile_Create(View):
+    @login_required
     def get(self, request, *args, **kwargs):
         if request.method == 'POST':
             form = ItemForm(request.POST)
@@ -185,9 +188,6 @@ class Profile_Create(View):
         if request.method == 'POST':
 
             if form.is_valid():
-                user = request.POST.get('user')
-                bio = request.POST.get('bio')
-                image = request.POST.get('image')
                 form.save()
 
             return redirect('profile')
@@ -195,6 +195,6 @@ class Profile_Create(View):
 
 class Profile_Delete(View):
     def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, id=item_id)
+        item = get_object_or_404(ProfileView, user=request.user, id=item_id)
         item.delete()
         return redirect('profile')

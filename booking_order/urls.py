@@ -32,7 +32,7 @@ urlpatterns = [
          name='order-confirmation'),
     path('profile/', Profile_View.as_view(), name='profile'),
     path('profile_add/', Profile_Create.as_view(), name='profile_add'),
-    path('update/<item_id>',
+    path('profile_update/<item_id>',
          Profile_Update.as_view(), name='profile_update'),
     path('delete/<item_id>',
          Profile_Delete.as_view(), name='profile'),

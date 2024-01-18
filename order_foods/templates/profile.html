@@ -13,12 +13,12 @@
             </h2>
             </div>   
                 <hr>
-            
+                {% csrf_token %}
                 {% for item in profile_view %}
                     {% if item.user %}
                     <div class="row">
                         <div class="col-xl-3 text-center">
-                        <img class="rounded-circle img-fluid" src="{{ item.image.url }}" alt="cute cat face and wrap cover round face" width="300" height="300">
+                        <img class="rounded-circle img-fluid" src="{{ item.image.url }}" width="300" height="300">
                 </div>
                 <div class="col-xl-9 ">
                     <div class="d-flex flex-row">

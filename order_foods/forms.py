@@ -1,7 +1,5 @@
 from .models import ProfileView, ContactView
-from django.contrib.auth.models import User
 from django import forms
-from django.urls import reverse_lazy
 
 
 class LoginForm(forms.Form):
