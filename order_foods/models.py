@@ -38,7 +38,7 @@ class OrderModel(models.Model):
 
 
 class ProfileView(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(to=User, on_delete=models.CASCADE)
     user = models.CharField(max_length=100, null=False, blank=False)
     bio = models.TextField()
     image = CloudinaryField('image')

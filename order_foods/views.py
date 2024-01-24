@@ -1,4 +1,5 @@
 from .forms import ItemForm, ContactForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
@@ -44,14 +45,14 @@ class Thank_You(View):
         return render(request, 'thank_you.html')
 
 
-class Login(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'accounts/login.html')
+# class Login(View):
+#     def get(self, request, *args, **kwargs):
+#         return render(request, 'accounts/login.html')
 
 
-class Sign_up(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'accounts/signup.html')
+# class Sign_up(View):
+#     def get(self, request, *args, **kwargs):
+#         return render(request, 'accounts/signup.html')
 
 
 class Order(View):
@@ -136,22 +137,22 @@ class OrderPayConfirmation(View):
 
 class Profile_View(View):
     @login_required
-    def get(self, request, *args, **kwargs):
-        profile_view = ProfileView.objects.all()
-
-        context = {'profile_view': profile_view
-                   }
-
+    def get(self, request, item_id,  *args, **kwargs):
+        
+        profile_view = get_object_or_404(ProfileView, pk=item_id, user=request.owner)
+        if profile_view.owner == request.user:
+            context = {'profile_view': profile_view}
         return render(request, 'profile.html', context)
 
 
 class Profile_Update(View):
     @login_required
     def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, user=request.user, id=item_id)
+        item = get_object_or_404(ProfileView, pk=item_id)
         if request.method == 'POST':
             form = ItemForm(request.POST, instance=item)
-            form = form.save()
+            if form.owner == request.user:
+                form = form.save()
         form = ItemForm(instance=item)
         context = {
             'form': form
@@ -176,7 +177,8 @@ class Profile_Create(View):
     def get(self, request, *args, **kwargs):
         if request.method == 'POST':
             form = ItemForm(request.POST)
-            form.save()
+            if form.owner == request.user:
+                form.save()
         form = ItemForm()
         context = {
             'form': form
@@ -194,7 +196,9 @@ class Profile_Create(View):
 
 
 class Profile_Delete(View):
+    @login_required
     def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, user=request.user, id=item_id)
-        item.delete()
+        item = get_object_or_404(ProfileView, id=item_id)
+        if item.owner == request.user:
+            item.delete()
         return redirect('profile')

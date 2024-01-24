@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from order_foods.views import (Home, About, Login, Contact, Profile_View,
-                               Profile_Update, Sign_up, Order,
+from order_foods.views import (Home, About, Contact, Profile_View,
+                               Profile_Update, Order,
                                OrderPayConfirmation, Profile_Delete,
                                Profile_Create, Thank_You
                                )
@@ -32,11 +32,9 @@ urlpatterns = [
          name='order-confirmation'),
     path('profile/', Profile_View.as_view(), name='profile'),
     path('profile_add/', Profile_Create.as_view(), name='profile_add'),
-    path('profile_update/<item_id>',
+    path('update/<item_id>',
          Profile_Update.as_view(), name='profile_update'),
     path('delete/<item_id>',
          Profile_Delete.as_view(), name='profile'),
-    path('acoounts/login/', Login.as_view(), name='login'),
-    path('accounts/signup/', Sign_up.as_view(), name='signup'),
     path('thank_you/', Thank_You.as_view(), name='thank_you'),
 ]

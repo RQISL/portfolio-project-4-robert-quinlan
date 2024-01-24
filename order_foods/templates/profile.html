@@ -9,38 +9,40 @@
         <div class="col-md-12 p-5">
             <div>
                 <h2 class="d-flex justify-content-between">Profile
-                <a href="{% url 'profile_add' %}" class="btn btn-dark" style="text-decoration: none;">Add</a>
             </h2>
-            </div>   
+            </div> 
                 <hr>
                 {% csrf_token %}
+                {% if user.is_authenticated %}
                 {% for item in profile_view %}
-                    {% if item.user %}
-                    <div class="row">
-                        <div class="col-xl-3 text-center">
-                        <img class="rounded-circle img-fluid" src="{{ item.image.url }}" width="300" height="300">
+                <div class="row">
+                    <div class="col-xl-3 text-center">
+                    <img class="rounded-circle img-fluid" src="{{ item.image.url }}" width="300" height="300">
+            </div>
+            <div class="col-xl-9 ">
+                <div class="d-flex flex-row">
+                <div class="text-dark p-2"><strong>Name:</strong> {{ item.user }}</div>
+            </div>
+                <div class="text-dark p-2"><strong>Biograpy:</strong><p>{{ item.bio }}</p></div>
+            </div>
+            </div>
                 </div>
-                <div class="col-xl-9 ">
-                    <div class="d-flex flex-row">
-                    <div class="text-dark p-2"><strong>Name:</strong> {{ item.user }}</div>
+                <div class="btn">
+                    <a href="/update/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Edit</a>
+                    <a href="/delete/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Delete_test</a>
                 </div>
-                    <div class="text-dark p-2"><strong>Biograpy:</strong><p>{{ item.bio }}</p></div>
-                </div>
-                </div>
-                    </div>
+                {% endfor %}
+
                     {% else %}
-                    <div class="btn">
-                        <a href="/update/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Edit</a>
-                        <a href="/delete/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Delete</a>
-                    </div>
-                   
-                    {% endif %}
-                    <div class="btn">
-                        <a href="/update/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Edit</a>
-                        <a href="/delete/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Delete</a>
-                    </div>
-                   
-                    {% endfor %}
+                  
+                <div class="btn">
+                    <a href="{% url 'profile_add' %}" class="btn btn-dark" style="text-decoration: none;">Add</a>
+                </div>
+                <p>Please add your profile here</p>
+                    {% endif %} 
+                    
+                    
+
         </div>
     </div>
 
