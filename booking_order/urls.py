@@ -15,26 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from order_foods.views import (Home, About, Contact, Profile_View,
-                               Profile_Update, Order,
-                               OrderPayConfirmation, Profile_Delete,
-                               Profile_Create, Thank_You
-                               )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', Home.as_view(), name='home'),
-    path('aboutus/', About.as_view(), name='aboutus'),
-    path('contact/', Contact.as_view(), name='contact'),
-    path('order_foods/', Order.as_view(), name='order_foods'),
-    path('order-confirmation/<int:pk>', OrderPayConfirmation.as_view(),
-         name='order-confirmation'),
-    path('profile/', Profile_View.as_view(), name='profile'),
-    path('profile_add/', Profile_Create.as_view(), name='profile_add'),
-    path('update/<item_id>',
-         Profile_Update.as_view(), name='profile_update'),
-    path('delete/<item_id>',
-         Profile_Delete.as_view(), name='profile'),
-    path('thank_you/', Thank_You.as_view(), name='thank_you'),
+    path('', include('order_foods.urls')),
 ]

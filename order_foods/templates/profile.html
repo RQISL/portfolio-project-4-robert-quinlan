@@ -12,7 +12,6 @@
             </h2>
             </div> 
                 <hr>
-                {% csrf_token %}
                 {% if user.is_authenticated %}
                 {% for item in profile_view %}
                 <div class="row">
@@ -29,9 +28,10 @@
                 </div>
                 <div class="btn">
                     <a href="/update/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Edit</a>
-                    <a href="/delete/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Delete_test</a>
+                    <a href="/delete/" class="btn btn-dark" style="text-decoration: none;">Delete_test</a>
                 </div>
                 {% endfor %}
+               
 
                     {% else %}
                   

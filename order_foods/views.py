@@ -1,5 +1,4 @@
 from .forms import ItemForm, ContactForm
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
@@ -135,30 +134,30 @@ class OrderPayConfirmation(View):
         return render(request, 'order_pay_confirmation.html', context)
 
 
-class Profile_View(View):
-    @login_required
-    def get(self, request, item_id,  *args, **kwargs):
-        
-        profile_view = get_object_or_404(ProfileView, pk=item_id, user=request.owner)
-        if profile_view.owner == request.user:
-            context = {'profile_view': profile_view}
-        return render(request, 'profile.html', context)
-
-
-class Profile_Update(View):
-    @login_required
-    def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, pk=item_id)
-        if request.method == 'POST':
-            form = ItemForm(request.POST, instance=item)
-            if form.owner == request.user:
-                form = form.save()
-        form = ItemForm(instance=item)
+@login_required
+def profile_view(request):
+    
+    profile_view = get_object_or_404(ProfileView, user=request.user)
+    if profile_view.user == request.user:
         context = {
-            'form': form
-        }
-        messages.success(request, f'Your account has been updated!')
-        return render(request, 'profile_update.html', context)
+            'profile_view': profile_view
+            }
+    return render(request, 'profile.html', context)
+
+
+@login_required
+def profile_update(request, item_id):
+    item = get_object_or_404(ProfileView, pk=item_id, user=request.user)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, instance=item)
+        if form.user == request.user:
+            form = form.save()
+    form = ItemForm(instance=item)
+    context = {
+        'form': form
+    }
+    messages.success(request, f'Your account has been updated!')
+    return render(request, 'profile_update.html', context)
 
     def post(self, request, item_id, *args, **kwargs):
         item = get_object_or_404(ProfileView, id=item_id)
@@ -172,18 +171,17 @@ class Profile_Update(View):
         return redirect('profile')
 
 
-class Profile_Create(View):
-    @login_required
-    def get(self, request, *args, **kwargs):
-        if request.method == 'POST':
-            form = ItemForm(request.POST)
-            if form.owner == request.user:
-                form.save()
-        form = ItemForm()
-        context = {
-            'form': form
-        }
-        return render(request, 'profile_add.html', context)
+@login_required
+def profile_create(request):
+    if request.method == 'POST':
+        form = ItemForm(request.POST)
+        if form.user == request.user:
+            form.save()
+    form = ItemForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'profile_add.html', context)
 
     def post(self, request, *args, **kwargs):
         form = ItemForm(request.POST, request.FILES)
@@ -195,10 +193,9 @@ class Profile_Create(View):
             return redirect('profile')
 
 
-class Profile_Delete(View):
-    @login_required
-    def get(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, id=item_id)
-        if item.owner == request.user:
-            item.delete()
-        return redirect('profile')
+@login_required
+def profile_delete(request):
+    item = get_object_or_404(ProfileView, user=request.user)
+    if item.user == request.user:
+        item.delete()
+    return redirect('profile')
