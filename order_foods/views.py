@@ -135,9 +135,9 @@ class OrderPayConfirmation(View):
 
 
 @login_required
-def profile_view(request):
+def profile_view(request, pk=id):
     
-    profile_view = get_object_or_404(ProfileView, user=request.user)
+    profile_view = get_object_or_404(ProfileView, pk=id, user=request.user)
     if profile_view.user == request.user:
         profile_view = ItemForm(request.FILES or None, instance=profile_view)
         
@@ -145,6 +145,9 @@ def profile_view(request):
             'profile_view': profile_view
             }
     return render(request, 'profile.html', context)
+
+
+print("The is print out", profile_view)
 
 
 @login_required

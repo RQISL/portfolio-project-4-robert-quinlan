@@ -27,7 +27,7 @@ urlpatterns = [
     path('order_foods/', Order.as_view(), name='order_foods'),
     path('order-confirmation/<int:pk>', OrderPayConfirmation.as_view(),
          name='order-confirmation'),
-    path('profile/', views.profile_view, name='profile'),
+    path('profile/<int:id>', views.profile_view, name='profile'),
     path('profile_add/', views.profile_create, name='profile_add'),
     path('update/<item_id>',
          views.profile_update, name='profile_update'),
