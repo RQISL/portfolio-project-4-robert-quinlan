@@ -21,4 +21,4 @@ class ContactForm(forms.ModelForm):
 class ItemForm(forms.ModelForm):
     class Meta:
         model = ProfileView
-        fields = ['user', 'bio', 'image']
+        fields = ['owner', 'user', 'bio', 'image']

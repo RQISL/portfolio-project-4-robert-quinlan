@@ -12,9 +12,10 @@
             </h2>
             </div> 
                 <hr>
-                {% if user.is_authenticated %}
+                {% if owner.is_authenticated %}
                 {% for item in profile_view %}
                 <div class="row">
+                    {% csrf_token %}
                     <div class="col-xl-3 text-center">
                     <img class="rounded-circle img-fluid" src="{{ item.image.url }}" width="300" height="300">
             </div>

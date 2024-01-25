@@ -139,6 +139,8 @@ def profile_view(request):
     
     profile_view = get_object_or_404(ProfileView, user=request.user)
     if profile_view.user == request.user:
+        profile_view = ItemForm(request.FILES or None, instance=profile_view)
+        
         context = {
             'profile_view': profile_view
             }
