@@ -27,6 +27,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
         </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/ico" href="{% static 'favicon/favicon.ico' %}" >
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -57,7 +58,7 @@
                         <a class="nav-link" href="{% url 'order_foods' %}">Order Foods</a>
                     </li>
                     <li class="nav-item text-center m-1 {% if request.path == profile %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'profile' user.id %}">Profile</a>
+                        <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                     </li>
                     <li class="nav-item text-center m-1 {% if request.path == account_logout %}active{% endif %}">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -65,8 +66,7 @@
                     {% else %}
                     <li class="nav-item text-center m-1 {% if request.path == order_foods %} active {% endif %}">
                         <a class="nav-link" aria-current="page" data-bs-toggle="modal"
-                            data-bs-target="#login-signup" href="{% url 'order_foods' %}">Order
-                            Foods</a>
+                            data-bs-target="#login-signup" href="{% url 'order_foods' %}">Order Foods</a>
                     </li>
                     {% endif %}
                     <li class="nav-item text-center m-1 {% if request.path == aboutus %}active{% endif %}">
@@ -98,7 +98,7 @@
             </div>
         </div>
     </nav>
-
+<!-- To keep the section for all the page contents -->
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
