@@ -43,7 +43,7 @@ CSRF_TRUSTED_ORIGINS = [
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-rqisl-portfolioproject-7tqlsgobztx.ws-eu104.gitpod.io',
+ALLOWED_HOSTS = ['8000-rqisl-portfolioproject-onj2fh4s4gp.ws-eu107.gitpod.io',
                'project-4-order-foods-65605ab1b9f2.herokuapp.com',
                  'localhost']
 
