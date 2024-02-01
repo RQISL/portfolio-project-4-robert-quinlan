@@ -1,50 +1,133 @@
 {% extends "base.html" %}
 {% block title %}Profile{% endblock %}
+{% load widget_tweaks %}
 
 {% load static %}
 
 {% block content %}
 <div class="container my-5">
-    <div class="row">
-        <div class="col-md-12 p-5">
-            <div>
-                <h2 class="d-flex justify-content-between">Profile
-            </h2>
-            </div> 
-                <hr>
-                {% if owner.is_authenticated %}
-                {% for item in profile_view %}
-                <div class="row">
-                    {% csrf_token %}
-                    <div class="col-xl-3 text-center">
-                    <img class="rounded-circle img-fluid" src="{{ item.image.url }}" width="300" height="300">
-            </div>
-            <div class="col-xl-9 ">
-                <div class="d-flex flex-row">
-                <div class="text-dark p-2"><strong>Name:</strong> {{ item.user }}</div>
-            </div>
-                <div class="text-dark p-2"><strong>Biograpy:</strong><p>{{ item.bio }}</p></div>
-            </div>
-            </div>
-                </div>
-                <div class="btn">
-                    <a href="/update/{{ item.id }}" class="btn btn-dark" style="text-decoration: none;">Edit</a>
-                    <a href="/delete/" class="btn btn-dark" style="text-decoration: none;">Delete_test</a>
-                </div>
-                {% endfor %}
-               
-
-                    {% else %}
-                  
-                <div class="btn">
-                    <a href="{% url 'profile_add' %}" class="btn btn-dark" style="text-decoration: none;">Add</a>
-                </div>
-                <p>Please add your profile here</p>
-                    {% endif %} 
-                    
-                    
-
-        </div>
+    <div class="px-5">
+    <h1 class="account-heading text-center mt-2">Welcome {{ user.username }} profile</h1>
+    <hr class="text-dark">
     </div>
+        <div class="row">
+            <div class="col-xl-4 text-center p-5">
+                <img class="rounded-circle" src="{{ user.profile.image.url }}" style="height: 300px; width: 300px;">
+            </div>
+            <!-- Display Profile page -->
+                <div class="col-xl-8 p-5">
+                    <h4>Name:</h4>
+                    <h3 class="account-heading border border-dark rounded-3 p-3" style="background-color: #8c9491; color:#2A2F33">
+                        {{ user.profile.name }}</h3>
+                    <h4>Biograpy:</h4>
+                    <p class="account-heading border border-dark rounded-3 p-3" style="background-color: #8c9491; color:#2A2F33">
+                        {{ user.profile.bio }}</p>
+                </div>
+            <!-- The form -->
+            <div class="col-xl-12 container-fluid px-5">
+                <button onclick="alert(`<strong>Please notice:</strong><br>
+                    <p>When you change your username on your profile page,
+                    Please make sure remember your username when it changed.
+                    If you forget username and it would not be able to reset or access when you login.</p>`);"
+                    
+                    class="btn btn-dark text-white container-fluid border-0" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#Edit" aria-expanded="false"
+                        aria-controls="Edit">
+                    Add &amp; Edit your profile
+                </button>
+                <div class="collapse" id="Edit">
+                    <div class="card card-body dark-bg text-white">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                <legend class="border-bottom mb-4">Profile Info</legend>
+                                <div>Userame:
+                                    {% render_field u_form.username placeholder="your first name..." class+="form-control" %}
+                                </div>
+                                <div>Name:
+                                    {% render_field u_form.name placeholder="your first name..." class+="form-control" %}
+                                </div>
+                                <br>
+                                <div>Biograpy:
+                                    {% render_field b_form.bio placeholder="write about yourself..." class+="form-control" %}
+                                </div>
+                                <br>
+                                <div>Upload your image:
+                                    <div>{% render_field p_form.image class+="form-control" %}</div>
+                                </div>
+                                <br>
+                            </fieldset>
+                                <div class="form-group text-center">
+                                    <button class="btn" style="background-color: #8c9491; color:white;" type="submit">Update</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="btn">
+                <a href="/delete/" class="btn btn-dark" style="text-decoration: none;">Delete</a>
+            </div> 
+            </div>  
+              
+</div>
 
+<!-- ***********************************************
+There is Alert screen as 'Warning' because
+The user change username and it will effect
+in the database changed. It explained to user
+to make sure rememeber when the username is changed 
+After login.
+**************************************************** -->
+<!-- Use Alert sytle by https://codepen.io/skazee/pen/xVvWdq -->
+<script>
+    var ALERT_TITLE = "Warning";
+var ALERT_BUTTON_TEXT = "I understood!";
+
+if(document.getElementById) {
+	window.alert = function(txt) {
+		createCustomAlert(txt);
+	}
+}
+
+function createCustomAlert(txt) {
+	d = document;
+
+	if(d.getElementById("modalContainer")) return;
+
+	mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+	mObj.id = "modalContainer";
+	mObj.style.height = d.documentElement.scrollHeight + "px";
+	
+	alertObj = mObj.appendChild(d.createElement("div"));
+	alertObj.id = "alertBox";
+	if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+	alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+	alertObj.style.visiblity="visible";
+
+	h1 = alertObj.appendChild(d.createElement("h1"));
+	h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+	msg = alertObj.appendChild(d.createElement("p"));
+	//msg.appendChild(d.createTextNode(txt));
+	msg.innerHTML = txt;
+
+	btn = alertObj.appendChild(d.createElement("a"));
+	btn.id = "closeBtn";
+	btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+	btn.href = "#";
+	btn.focus();
+	btn.onclick = function() { removeCustomAlert();return false; }
+
+	alertObj.style.display = "block";
+	
+}
+
+function removeCustomAlert() {
+	document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+function ful(){
+alert('Alert this pages');
+}
+</script>
     {% endblock content %}
