@@ -1,9 +1,13 @@
-from .forms import ItemForm, ContactForm
+from .forms import (ContactForm, UserUpdateForm,
+                    BioUpdateForm, ProfileUpdateForm
+                    )
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
-from .models import MenuItem, OrderModel, ProfileView
+from .models import MenuItem, OrderModel, Profile
 from django.contrib import messages
+
+""" This is Home page view """
 
 
 class Home(View):
@@ -11,9 +15,15 @@ class Home(View):
         return render(request, 'index.html')
 
 
+""" This is About page view """
+
+
 class About(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'aboutus.html')
+
+
+""" This is Contact page view """
 
 
 class Contact(View):
@@ -39,19 +49,28 @@ class Contact(View):
                 print(form.non_field_errors())
 
 
+"""
+This is response 'Thank you' page view,
+when the contact page is sending and turn out
+the page to 'Thank you'
+
+"""
+
+
 class Thank_You(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'thank_you.html')
 
 
-# class Login(View):
-#     def get(self, request, *args, **kwargs):
-#         return render(request, 'accounts/login.html')
+"""
+This is order foods page view,
+when you select the food as you like
+and fill the detail address for delivery
+and send off. It will turn out the page
+detail order foods and address, that comes
+from order confirmation page.
 
-
-# class Sign_up(View):
-#     def get(self, request, *args, **kwargs):
-#         return render(request, 'accounts/signup.html')
+"""
 
 
 class Order(View):
@@ -92,7 +111,7 @@ class Order(View):
         items = request.POST.getlist('items[]')
 
         for item in items:
-            menu_item = MenuItem.objects.get(pk__contains=int(item))
+            menu_item = MenuItem.objects.get(pk=int(item))
             item_data = {
                 'id': menu_item.pk,
                 'name': menu_item.name,
@@ -121,6 +140,14 @@ class Order(View):
         return redirect('order-confirmation', pk=order.pk)
 
 
+"""
+This is order confirmation page. As above
+follows the order foods seleted and show up
+the price in totals
+
+"""
+
+
 class OrderPayConfirmation(View):
     def get(self, request, pk, *args, **kwargs):
         order = OrderModel.objects.get(pk=pk)
@@ -134,73 +161,63 @@ class OrderPayConfirmation(View):
         return render(request, 'order_pay_confirmation.html', context)
 
 
+"""
+This is Profile page and included CRUD.
+When you click to 'Add & Edit' and drop down
+the form, you can fill the profile and image upload
+after clcik the 'Update'
+
+There is popup screen as 'Warning' because
+The user change username and it will effect
+in the database changed. It explained to user
+to make sure rememeber when the username is changed.
+
+"""
+
+
 @login_required
-def profile_view(request, pk=id):
-    
-    profile_view = get_object_or_404(ProfileView, pk=id, user=request.user)
-    if profile_view.user == request.user:
-        profile_view = ItemForm(request.FILES or None, instance=profile_view)
-        
-        context = {
-            'profile_view': profile_view
-            }
+def profile(request):
+    Profile.objects.get_or_create(user=request.user)
+    if request.method == 'POST':
+        u_form = UserUpdateForm(request.POST, instance=request.user)
+        b_form = BioUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(request.POST,
+                                   request.FILES,
+                                   instance=request.user.profile)
+        if u_form.is_valid() and b_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            b_form.save()
+            p_form.save()
+            messages.success(request, f'{"Your account has been updated!"}')
+            return redirect('profile')
+
+    else:
+        u_form = UserUpdateForm(instance=request.user)
+        b_form = BioUpdateForm(request.POST, instance=request.user)
+        p_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'u_form': u_form,
+        'b_form': b_form,
+        'p_form': p_form
+    }
+
     return render(request, 'profile.html', context)
 
 
-print("The is print out", profile_view)
+"""
+This is delete button in Profile page.
+It will be empty image and profile detail.
+You can fill it again through 'Add & Edit'
+update again. The username will be remain
+same as display on the profile page.
 
-
-@login_required
-def profile_update(request, item_id):
-    item = get_object_or_404(ProfileView, pk=item_id, user=request.user)
-    if request.method == 'POST':
-        form = ItemForm(request.POST, instance=item)
-        if form.user == request.user:
-            form = form.save()
-    form = ItemForm(instance=item)
-    context = {
-        'form': form
-    }
-    messages.success(request, f'Your account has been updated!')
-    return render(request, 'profile_update.html', context)
-
-    def post(self, request, item_id, *args, **kwargs):
-        item = get_object_or_404(ProfileView, id=item_id)
-        if request.method == 'POST':
-            form = ItemForm(request.POST or None,
-                            request.FILES or None, instance=item)
-            form.save()
-        else:
-            item = ProfileView()
-
-        return redirect('profile')
-
-
-@login_required
-def profile_create(request):
-    if request.method == 'POST':
-        form = ItemForm(request.POST)
-        if form.user == request.user:
-            form.save()
-    form = ItemForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'profile_add.html', context)
-
-    def post(self, request, *args, **kwargs):
-        form = ItemForm(request.POST, request.FILES)
-        if request.method == 'POST':
-
-            if form.is_valid():
-                form.save()
-
-            return redirect('profile')
+"""
 
 
 @login_required
 def profile_delete(request):
-    item = get_object_or_404(ProfileView, user=request.user)
+    item = get_object_or_404(Profile, user=request.user)
     if item.user == request.user:
         item.delete()
-    return redirect('profile')
+    return redirect('/')
