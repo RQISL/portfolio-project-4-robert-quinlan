@@ -1,10 +1,13 @@
-from .models import ProfileView, ContactView
+from .models import Profile, ContactView
 from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
+"""
+This is for contact form,
+use storage in Database.
 
-class LoginForm(forms.Form):
-    username = forms.CharField(max_length=65)
-    password = forms.CharField(max_length=65, widget=forms.PasswordInput)
+"""
 
 
 class ContactForm(forms.ModelForm):
@@ -18,7 +21,41 @@ class ContactForm(forms.ModelForm):
         fields = '__all__'
 
 
-class ItemForm(forms.ModelForm):
+"""
+This is for CRUD in profile form,
+use storage in Database. It is included
+Add and Edit active in the from.
+
+The Add is as create instead
+
+"""
+
+
+class UserRegisterForm(UserCreationForm):
+    username = forms.CharField()
+
     class Meta:
-        model = ProfileView
-        fields = ['owner', 'user', 'bio', 'image']
+        model = User
+        fields = ['username']
+
+
+class UserUpdateForm(forms.ModelForm):
+    name = forms.CharField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'name']
+
+
+class BioUpdateForm(forms.ModelForm):
+    bio = forms.CharField(widget=forms.Textarea)
+
+    class Meta:
+        model = User
+        fields = ['bio']
+
+
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['image', 'username', 'name', 'bio']
