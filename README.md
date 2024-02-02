@@ -185,29 +185,35 @@ Existing Features
 
 
 ## Profile page
-* A profile page with CRUD functionality. Users can easily create, read, update, and delete their profiles with the click of a button. With the ability to edit and delete images and biographies, users have complete control over their profiles. If a user decides to delete their profile, an empty page will be displayed with an option to create a new profile using the "Add" button. 
+1. Introducing our profile page with CRUD functionality! Easily create, read, update, and delete your profile with just a click of a button. Edit and delete images and biographies effortlessly, giving you full control over your profile. If you ever decide to delete your profile, don't worry! We've got you covered with an empty page and an option to create a new profile using our convenient "Add & Edit" button.
 
-* Please note that this is a basic implementation of CRUD functionality. Check out the attached screenshots for a preview.
+2. We understand the importance of your username, so when you click on the "Add & Edit" button, a warning pop-up screen will remind you that changing your username will affect the database. Remember to keep your username in mind during any changes, as forgetting it will prevent you from resetting it.
+
+3. Clicking on the "Add & Edit" button will drop down a form where you can fill in your profile details. This form also allows you to edit your existing profile. 
+
+4. At the bottom of the form, there is a "Delete" button. Clicking on it will delete your profile, leaving it empty. You can then add new information to update your profile as needed.
+
+5. Please note that this implementation provides a basic version of CRUD functionality. For a sneak peek, check out the attached screenshots.
 
 ## Profile page
 * 
     <details>
         <summary>Click here to see profile page</summary>
-        <img src="media/images_readme/Site_pages/Profile_page.png" alt=“profile page“>
+        <img src="media/images_readme/Site_pages/profile_page.png" alt=“profile page“>
     </details>
 
-## Profile page > Profile editing page
+## Profile page > Warning Screen Pop-up
 * 
     <details>
-        <summary>Click here to see profile editing</summary>
-        <img src="media/images_readme/Site_pages/Profile_edit_page.png" alt=“Display profile editing page”>
+        <summary>Click here to see warning Screen Pop-up</summary>
+        <img src="media/images_readme/Site_pages/alert_screen.png" alt=“Display profile warning screen pop-uppage”>
     </details>
 
 ## Profile page > Profile create page
 * 
     <details>
-        <summary>Click here to see Add profile> Sign-up page</summary>
-        <img src="media/images_readme/Site_pages/Create_profile_page.png" alt=“Display add to create profile page”>
+        <summary>Click here to see profile in button "Add & Edit" </summary>
+        <img src="media/images_readme/Site_pages/form_crud.png" alt=“Display add to create profile page”>
     </details>
 
 
@@ -384,15 +390,6 @@ The user-friendly website with a convenient logout feature is located on the nav
 * Our experienced tutors are on hand to provide support and advice, ensuring that you have all the tools you need to succeed. Whether you're a beginner or an experienced developer, our Django CRUD tutorial is an essential resource for mastering this critical aspect of Django development.
 
 * Our mentor advised me where my concept can challenge and learn from mistakes, easily manage projects and avoid unnecessary complications. Take control of the development process and achieve success. It was more complications than you expected.  
-
-## Two things issues
-* The common issues faced with Favicon and Prettier Formatter. Our easy-to-use tool ensures seamless coding and eliminates errors but I decided not to fix due to time constraints.
-
-* 
-    <details>
-            <summary>Click here to see the red box error</summary>
-            <img src="media/images_readme/Site_pages/Error_favion.png" alt=“Display red box hight to show error of favicon”>
-    </details>
 
 # Deployment
 
