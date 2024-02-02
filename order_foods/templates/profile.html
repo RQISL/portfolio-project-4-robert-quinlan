@@ -20,8 +20,10 @@
                     <h3 class="account-heading border border-dark rounded-3 p-3" style="background-color: #8c9491; color:#2A2F33">
                         {{ user.profile.name }}</h3>
                     <h4>Biograpy:</h4>
-                    <p class="account-heading border border-dark rounded-3 p-3" style="background-color: #8c9491; color:#2A2F33">
-                        {{ user.profile.bio }}</p>
+                    <div class="account-heading border border-dark rounded-3 p-3" style="background-color: #8c9491; color:#2A2F33">
+                            {{ user.profile.bio|linebreaks }}
+                    </div>
+                    
                 </div>
             <!-- The form -->
             <div class="col-xl-12 container-fluid px-5">
